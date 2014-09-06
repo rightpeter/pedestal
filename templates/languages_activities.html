@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Foreign Language Activity Month</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+
+    <!-- Loading Flat UI -->
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{
+    static_url("css/languages_activities/demo.css") }}">
+
+    <!-- Loading My css -->
+    <link rel="stylesheet" type="text/css" href="{{
+    static_url("css/languages_activities/flam.css") }}">
+    
+    
+   
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+        <script src="{{ static_url("script/html5shiv.js") }}"></script>
+        <script src="{{ static_url("script/respond.min.js") }}"></script>
+    <![endif]-->
+
+    <!-- Loading GalleryView js files-->
+    <script src="{{ static_url("script/jquery-1.7.1-min.js") }}"></script>
+    <script src="{{ static_url("script/bootstrap-tab.js") }}"></script>
+    <script src="{{ static_url("script/jquery-1.8.18-ui.min.js") }}"></script>
+    <script src="{{ static_url("script/jquery.timers-1.2.js") }}"></script>
+    <script src="{{ static_url("script/jquery.easing.1.3.js") }}"></script>
+    <script src="{{ static_url("script/jquery.galleryview-3.0-dev.js") }}"></script>
+
+    <!--loading GalleryView css-->
+    <link rel="stylesheet" type="text/css" href="{{
+    static_url("css/languages_activities/jquery.galleryview-3.0-dev.css") }}">
+
+    <!-- Lastly, call the galleryView() function on your unordered list(s) -->
+    <!--配合标签页的激活使用-->
+    
+    <script type="text/javascript">
+    $(function(){
+        $('#myGallery1').galleryView();
+      });
+    $(function(){
+        $('#myGallery2').galleryView();
+      });
+    $(function(){
+        $('#myGallery3').galleryView();
+      });
+    $(function(){
+        $('#myGallery4').galleryView();
+      });
+    $(function(){
+        $('#myGallery5').galleryView();
+      });
+    $(function(){
+        $('#myGallery6').galleryView();
+      });
+    $(function(){
+        $('#myGallery8').galleryView();
+      });
+    $(function(){
+        $('#myGallery9').galleryView();
+      });
+
+    /*$('#myTab li').click(function(){
+        $('#myGallery').galleryView();
+      });*/
+    /*$('a[data-toggle="tab"]').on('shown', function (e) {
+      e.target.galleryView();
+    });*/
+    /*$('#myTab li[class="active"]'){
+      $(function(){
+        $('#myGallery').galleryView();
+      });
+    };*/
+      
+    </script>
+
+  </head>
+  <body>
+   
+    {% module NavbarPedestal(user, url, login_state) %}
+    <div class="container">
+    
+        <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="nav" class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand active" style="color:#1abc9c" href="#">Pedestal</a>
+        </div>
+        <ul class="nav navbar-nav ">
+          <li><a href="/project">项目实验室</a>
+          </li>
+          <li><a href="/index">周知新闻</a>
+          </li>
+          <li><a href="/about">关于我们</a>
+          </li>
+        </ul>
+
+      <div class="navbar-right" style="padding-top:10px">
+
+        <div class="link-list">
+        
+        </div>
+      </div>
+
+
+    </div>
+    </nav> -->
+
+    <h1 class="demo-headline actv-title">第十届外语活动月</h1>
+    <div class="row demo-tiles activities">
+    <h3>第九届外语活动月视频</h3>
+    <div class="video-about-us">
+        <div class="demo-vedio">
+            <div class="video-screen">
+                <!--[if !IE]> -->
+                <video class="video-sutra" controls="controls" preload="auto"
+                width="500"
+                poster="/static/images/languages_activities/video/poster.jpg" data-setup="{}">
+                   <!-- <source src="http://www.w3school.com.cn/i/movie.ogg"
+                    type="video/ogg" />
+                    -->
+                    <source
+                    src="{{
+                    static_url("images/languages_activities/video/ninth_video.mp4")
+                    }}" type="video/mp4" />
+                    <source
+                    src="/static/images/languages_activities/video/ninth_video.webm" type="video/webm" />
+                    <source
+                    src="/static/images/languages_activities/video/ninth_video.ogg" type="video/ogg" />
+                    <p>你的浏览器不支持该格式视频</p>
+            
+                </video>
+                <!-- <![endif]-->
+            <!--[if IE]>
+            <video class="video-js" controls preload="auto" width="620" height="256" poster="http://video-js.zencoder.com/oceans-clip.jpg" data-setup="{}">
+              <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'/>
+              <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'/>
+            </video>
+          <![endif]-->
+            </div>
+            
+        </div>
+        
+      </div>
+        <div class="col-xs-3 tip-messages">
+          <div class="tile tile-hot">
+            <img src="/static/images/languages_activities/calligraphy.jpg" alt="Calligraphy" class="tile-image big-illustration">
+            <h3 class="tile-title">外语书法比赛</h3>
+            <p>书法是”无声之音，无形之相“.来展示你书法艺术的魅力吧</p>
+            
+            <span id="info-detail">
+              <a href="http://ssdut.dlut.edu.cn/index.php/News/11773.html">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+            
+          </div>
+        </div>
+
+        <div class="col-xs-3 tip-messages">
+          <div class="tile tile-hot">
+            <img src="/static/images/languages_activities/solicit_articles.jpg" alt="Solicit articles" class="tile-image">
+            <h3 class="tile-title">外语征文比赛</h3>
+            <p>挥起手中的羽毛笔，串起波涛汹涌的记忆。我们正等着你</p>
+            
+            <span id="info-detail">
+              <a href="http://ssdut.dlut.edu.cn/index.php/News/11749.html">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-xs-3 tip-messages">
+          <div class="tile tile-hot">
+            <img src="/static/images/languages_activities/playlet.jpg" alt="Playlet" class="tile-image">
+            <h3 class="tile-title">歌曲短剧大赛</h3>
+            <p>只要你敢想，我们就能为你提供这样的舞台</p>
+            
+            <span id="info-detail">
+              <a href="http://ssdut.dlut.edu.cn/index.php/News/11748.html">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+          </div>
+
+        </div>
+      
+
+        <div class="col-xs-3 tip-messages">
+          <div class="tile">
+            <img src="/static/images/languages_activities/lectures.jpg" alt="Lectures" class="tile-image">
+            <h3 class="tile-title">外语讲座</h3>
+            <p></p>
+
+            <span id="info-detail">
+              <a href="#">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+            
+          </div>
+        </div>
+    </div>
+        
+    <div class="row demo-tiles activities">
+        <div class="col-xs-3 tip-messages">
+          <div class="tile tile-hot">
+            <img src="/static/images/languages_activities/contest.jpg" alt="Contest" class="tile-image big-illustration">
+            <h3 class="tile-title">科普知识竞赛</h3>
+            <p>你敢于挑战么?你足够自信么？来感受用外语抢答的快感吧</p>
+            <span id="info-detail">
+              <a href="http://ssdut.dlut.edu.cn/index.php/News/11747.html">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-xs-3 tip-messages">
+          <div class="tile">
+            <img src="/static/images/languages_activities/hearing.jpg" alt="Hearing" class="tile-image">
+            <h3 class="tile-title">英语听力大赛</h3>
+            <p></p>
+            <span id="info-detail">
+              <a href="http://ssdut.dlut.edu.cn/index.php/News/11773.html">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-xs-3 tip-messages">
+          <div class="tile tile-hot">
+            <img src="/static/images/languages_activities/speech.jpg" alt="Speech" class="tile-image">
+            <h3 class="tile-title">英语演讲大赛</h3>
+            <p></p>
+            <span id="info-detail">
+              <a href="#">报名</a>
+              <a href="http://page.renren.com/601869208">围观</a>
+              <a href="http://www.pedestal.cn/index">吐槽</a>
+            </span>
+          </div>
+
+        </div>
+      
+
+        <div class="col-xs-3 tip-messages">
+          <div class="tile">
+            <img src="/static/images/languages_activities/wondering.png" alt="Wondering" class="tile-image">
+            <h3 class="tile-title">有疑惑</h3>
+            <p></p>
+            <span id="info-detail">
+              <a href="http://page.renren.com/601869208">点我帮你解决</a>
+            </span>
+            
+          </div>
+        </div>
+    </div>
+
+    <h1 class="demo-headline actv-title">精彩回顾</h1>
+    
+    <h3>照片画廊</h3>
+    <div class="tabbable tab-below photos">
+      
+      <div class="tab-content">
+        <div class="tab-pane" id="tab1">
+          <ul id="myGallery1">
+            <li><img src="/static/images/languages_activities/photos/first/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/first/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/first/3.JPG"/>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab2">
+          <ul id="myGallery2">
+            <li><img src="/static/images/languages_activities/photos/second/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/second/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/second/3.JPG"/>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab3">
+          <ul id="myGallery3">
+            <li><img src="/static/images/languages_activities/photos/third/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/3.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/4.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/5.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/6.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/7.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/8.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/9.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/10.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/third/11.JPG"/>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab4">
+          <ul id="myGallery4">
+            <li><img src="/static/images/languages_activities/photos/forth/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/3.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/4.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/5.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/6.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/7.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/8.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/9.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/10.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/11.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/12.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/forth/13.JPG"/>
+          </ul>
+        </div>
+        <div class="tab-pane active" id="tab5">
+          <ul id="myGallery5">
+            <li><img src="/static/images/languages_activities/photos/fifth/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/fifth/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/fifth/3.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/fifth/4.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/fifth/5.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/fifth/6.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/fifth/7.JPG"/>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab6">
+          <ul id="myGallery6">
+            <li><img src="/static/images/languages_activities/photos/sixth/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/3.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/4.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/5.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/6.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/7.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/8.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/9.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/10.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/11.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/12.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/13.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/sixth/14.JPG"/>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab7">
+          <p>暂时木有第七届的照片0_0</p>
+        </div>
+        <div class="tab-pane" id="tab8">
+          <ul id="myGallery8">
+            <li><img src="/static/images/languages_activities/photos/eighth/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/eighth/2.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/eighth/3.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/eighth/4.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/eighth/5.JPG"/>
+          </ul>
+          
+        </div>
+        <div class="tab-pane" id="tab9">
+          <ul id="myGallery9">
+            <li><img src="/static/images/languages_activities/photos/ninth/1.JPG"/>
+            <li><img src="/static/images/languages_activities/photos/ninth/2.JPG"/>
+          </ul>
+        </div>
+      
+      </div>
+      <ul class="nav nav-tabs tabCenter"id="myTab">
+        <li><a href="#tab1" data-toggle="tab">第一届</a></li>
+        <li><a href="#tab2" data-toggle="tab">第二届</a></li>
+        <li><a href="#tab3" data-toggle="tab">第三届</a></li>
+        <li><a href="#tab4" data-toggle="tab">第四届</a></li>
+        <li class="active"><a href="#tab5" data-toggle="tab">第五届</a></li>
+        <li><a href="#tab6" data-toggle="tab">第六届</a></li>
+        <li><a href="#tab7" data-toggle="tab">第七届</a></li>
+        <li><a href="#tab8" data-toggle="tab">第八届</a></li>
+        <li><a href="#tab9" data-toggle="tab">第九届</a></li>
+      </ul>
+    </div>
+    
+        
+    </div>
+    <!-- /.container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-7">
+            <h3 class="footer-title">
+                <span>我们在: </span><a href="http://page.renren.com/601869208" target="_blank">语言与思维实训基地</a>
+            </h3>
+          </div> <!-- /col-xs-7 -->
+
+          <div class="col-xs-5">
+            <div class="footer-cooperate">
+              <h3 class="footer-title">合作伙伴</h3>
+              <ul>
+                <li><a href="http://www.renren.com/309599414">TEDxDUT负责人： 孔维龙</a></li>
+                <li><a href="http://www.renren.com/302576647 ">TEDxDUT软院负责人：赵向宇</a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+<link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+<!-- <link rel="stylesheet" href="{{ static_url("css/index/carousel.css")}}">    -->
+<link rel="stylesheet" href="{{ static_url("css/about/about.css") }}">
+</head>
+<body style="padding-bottom: 0px;">
+{% module NavbarPedestal(user, url, login_state) %}
+<div class="carousel-inner" style="margin-top:40px">
+    <div style="background:url(/static/images/pedestal_welcome.jpg);background-size:100%;  color:#eee; min-width:100%; height:400px;"></div>
+	<div class="container">
+		<div class="carousel-caption">
+			<h4 class="text-center" style="font-size:100px;">Pedestal</h4>
+			<h2>&nbsp</h2>
+			<a class="btn btn-lg btn-primary btn-shadow bs3-link"
+                style="box-shadow: 0px -5px 0px rgb(34,151,132) inset;letter-spacing:.1em" role="button" target="_blank" href="/signup">加入我们!</a>
+		</div>
+	</div>
+</div>
+<div class="center-block" style="width:100%;color:#111;background-color:#eee;padding:10px 40px 20px;">
+	<div class="container">
+		<h4 class="text-center"><strong>团队介绍</strong></h4>
+		<p class="text-center">Pedestal</p>
+		<p>&nbsp;&nbsp;将名字取作Pedestal(基石)，表明我们是一支注重基础、面向所有人、为大家提供服务的团队。
+我们要真正的运用所学的知识技能----扎实基础而实用的技能，为大家提供方便快捷的服务，
+或是一些看起来很平常但用起来却非常方便的东西，而我们正在切切实实认认真真的作着这些。
+我们即将推出的功能是学生周知的吐槽功能，相信很多人都会对一些天雷滚滚的通告有些想法，
+但又无处吐槽，只能通过微博、人人等平台发表自己的看法，恐怕也得不到广泛的关注。
+而我们的Pedestal平台的这一项小功能这好解决了这个问题，更好的为大家提供了一个平台，
+使大家更自由、更集中的发表自己心中的看法。我们还有更多更好玩应用正在研发中，
+相信会很快投入使用，期待大家的关注。如果你也有一颗为大家服务的心，如果你也有一些优秀的创意，
+如果你也想通过做些什么来展示自我，那么不要再犹豫了，赶快加入我们吧！
+	    </p>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+	<ul class="media-list">
+        <li class="media info-block">
+			<a class="pull-left col-md-3" href="/home/100005">
+				<img class="image-object img-rounded img-md" src="{{ static_url("images/plu.jpg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+					<h4 class="media-heading header" >陆立昊</h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p>年级: 2011</p>
+							<p>职务: Pedestal运营及后台</p>
+							<p>参与项目: 所有项目后台</p>
+						</div>
+                        <p
+                        style="color:black">经历大一大二的积累，终于能够有足够的能力做一些事情。周知吐槽只是一个开始，我们已经设想了更多的非常使用的应用。我将继续和小伙伴一起努力开发，同时也希望志同道合的朋友们加入我们Pedestal大家庭。</p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<!-- <li class="media info-block">
+			<a class="pull-left col-md-3" href="/home/100018">
+				<img class="image-object img-rounded img-md" src="{{ static_url("images/pxd.jpeg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+					<h4 class="media-heading header" >李信栋</h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p>年级: 2011</p>
+							<p>职务: 团队唯一前端</p>
+							<p>参与项目: 所有项目前端</p>
+						</div>
+                        <p style="color:black">我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！我TM不是前端！</p>
+					</div>
+				</div>
+			</div>
+            </li> -->
+
+
+		<li class="media info-block">
+			<a class="pull-left col-md-3" href="/home/100009">
+				<img class="image-object img-rounded img-md" src="{{ static_url("images/pqy.jpg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+					<h4 class="media-heading header" >裘毅</h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p>年级: 2012</p>
+							<p>职务: 超神美工</p>
+							<p>参与项目: 所有项目美工设计</p>
+						</div>
+                        <p style="color:black">经历几次的锻炼，现在老板每次压榨性收图我都能应对自如，有时是三四个美工的工作量他要我一个晚上搞完，不过我也知道这
+                        是为我好，这不，我的工作效率简直不像人了，一人做五份不用愁，撸一下午再做图无压力，当我所要工资的时候竟然会招来惨绝人寰的咒骂，我也
+                        十分的无奈啊，谁叫我人好长得丑，天生被人捅。所以，看到我这么辛苦，你还不来注册一下？</p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+			
+		
+
+		<li class="media info-block">
+			<a class="pull-left col-md-3" href="/home/100000">
+                <img class="image-object img-rounded img-md" src="{{ static_url("images/psu.jpeg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+					<h4 class="media-heading header" >苏鹏</h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p>年级: 2011</p>
+							<p>职务: WP开发</p>
+							<p>参与项目: Geography_Cloud</p>
+						</div>
+						<p style="color:black">本人乐观大方，热衷运动，但又经常懒得运动。。。平常宅在寝室看各种体育转播，也爱看看电影，追一些英剧美剧。
+                        喜欢结交各种朋友，比较不同的性格与人生来安完善自己。目前不得已加入考研党，希望接下来这段时间能少苦逼一点。</p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+
+		<li class="media info-block">
+			<a class="pull-left col-md-3" href="/home/100002">
+				<img class="image-object img-rounded img-md" src="{{ static_url("images/pzl.jpg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+					<h4 class="media-heading header" >周里</h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p>年级: 2011</p>
+							<p>职务: 算法设计</p>
+							<p>参与项目: Geography_Cloud</p>
+						</div>
+						<p
+                        style="color:black">
+                        热爱学习，热爱生活，热爱Pedestal！作为Pedestal的一员，我很有幸遇到这么多给力的队员，大家志趣相投才一起聚在Pedestal，在这里，
+                        我们找到了一直潜藏在心中的共同语言，我们找到了可以一起为之奋斗的目标。在Pedestal中学习，
+                        在学习中不断完善Pedestal。展现团队的魅力，感受团队的乐趣，你还在犹豫什么，来加入我们吧，
+                        一起分享阳光，分享快乐，追逐梦想！
+                        </p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="media info-block">
+			<a class="pull-left col-md-3" href="/home/100002">
+				<img class="image-object img-rounded img-md" src="{{
+                static_url("images/psxj.jpg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+					<h4 class="media-heading header" >孙新杰</h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p>年级: 2011</p>
+							<p>职务: 团队唯一妹子</p>
+							<p>参与项目: 所有项目前端</p>
+						</div>
+						<p
+                        style="color:black">
+                        一只想做前端攻城狮的喵!<br>
+                        一只想做前端攻城狮的喵!!<br>
+                        一只想做前端攻城狮的喵!!!<br>
+                        一只想做前端攻城狮的喵!!!!!!!!!!!!!<br>
+                        </p>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+<div class="footer"> 
+	<div class="row" style="text-align:center; vertical-align: middle;">
+		<div class="center-block">
+		<br><br>
+		<p>本节目由bilibili动画  提供</p>
+		<p>一个气泡形状的提示（Tooltip）控件，可以在其围绕的元素周围做360度任意定位。 </p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

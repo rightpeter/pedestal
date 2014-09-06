@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+after	tucao_index.html	/^function after()  \/\/点击下一条$/;"	f
+before	tucao_index.html	/^function before()  \/\/点击上一条$/;"	f
+change	tucao_index.html	/^function change(page_1) \/\/控制翻页按钮$/;"	f
+first	tucao_index.html	/^function first()     \/\/首页$/;"	f
+getdata	tucao_index.html	/^    function getdata(url,ti,f,a,to,j)   \/\/从服务器获取json$/;"	f
+getvalue	tucao_index.html	/^function getvalue(obj)  \/\/点击按钮$/;"	f
+jump	tucao_index.html	/^function jump() \/\/跳转$/;"	f
+last	tucao_index.html	/^function last()      \/\/末页$/;"	f
+removeHTMLTag	tucao_index.html	/^        function removeHTMLTag(str)\/\/去掉html标签$/;"	f
+setdata	tucao_index.html	/^        function setdata(s,ti,f,a,to,j)\/\/设置每一条数据$/;"	f
+view	tucao_index.html	/^function view(c_id) \/\/通过当前id显示一个页面的内容$/;"	f

@@ -1,0 +1,643 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.min.css") }}">
+<script src="{{ static_url("script/jQuery.js") }}"></script>
+<style>
+.mytable{
+width:60%;
+margin:0 auto;
+font-family: Georgia, serif;}
+.mylist{
+list-style-type : none;
+border:1px;
+}
+.mycolor{
+background-color:#3399FF;
+color: #CCFFFF;
+
+}
+.mycolor1{
+color:#3399FF;
+}
+BODY {
+FONT-SIZE: 12px;FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; PADDING-LEFT: 25px;
+}
+DIV.scott {
+PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 3px; PADDING-TOP: 3px; TEXT-ALIGN: center
+}
+DIV.scott A {
+BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ddd 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ddd 1px solid; COLOR: #88af3f; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #ddd 1px solid; TEXT-DECORATION: none
+}
+DIV.scott A:hover {
+BORDER-RIGHT: #85bd1e 1px solid; BORDER-TOP: #85bd1e 1px solid; BORDER-LEFT: #85bd1e 1px solid; COLOR: #638425; BORDER-BOTTOM: #85bd1e 1px solid; BACKGROUND-COLOR: #f1ffd6
+}
+DIV.scott A:active {
+BORDER-RIGHT: #85bd1e 1px solid; BORDER-TOP: #85bd1e 1px solid; BORDER-LEFT: #85bd1e 1px solid; COLOR: #638425; BORDER-BOTTOM: #85bd1e 1px solid; BACKGROUND-COLOR: #f1ffd6
+}
+DIV.scott SPAN.current {
+BORDER-RIGHT: #b2e05d 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #b2e05d 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; BORDER-LEFT: #b2e05d 1px solid; COLOR: #fff; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #b2e05d 1px solid; BACKGROUND-COLOR: #b2e05d
+}
+DIV.scott SPAN.disabled {
+BORDER-RIGHT: #f3f3f3 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #f3f3f3 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #f3f3f3 1px solid; COLOR: #ccc; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #f3f3f3 1px solid
+}</style>
+
+<title> TestPage </title>
+</head>
+<body>
+<style>
+a.a2{
+color:#CCFFFF;
+}
+</style>
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h3 class="text-center mycolor1">
+				索引界面
+			</h3>
+			<table class="table mytable" >
+				<thead>
+					<tr class="mycolor1">
+
+						<th width="60%">
+							标题
+						</th>
+						<th width="10%">
+							发表人
+						</th>
+						<th width="15%">
+							时间
+						</th>
+						<th width="15%">
+							来源
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="mycolor1">
+                                                <td id="topic_1">
+                                                
+                                                </td>
+						<td id="author_1">
+							
+						</td>
+						<td id="time_1">
+							
+						</td>
+						<td id="from_1">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_2">
+							
+						</td>
+						<td id="author_2">
+							
+						</td>
+						<td id="time_2">
+							
+						</td>
+						<td id="from_2">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_3">
+							
+						</td>
+						<td id="author_3">
+							
+						</td>
+						<td id="time_3">
+							
+						</td>
+						<td id="from_3">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+						<td id="topic_4">
+							
+						</td>
+						<td id="author_4">
+							
+						</td>
+						<td id="time_4">
+							
+						</td>
+						<td id="from_4">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_5">
+							
+						</td>
+						<td id="author_5">
+							
+						</td>
+						<td id="time_5">
+							
+						</td>
+						<td id="from_5">
+							 
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_6">
+							
+						</td>
+						<td id="author_6">
+							
+						</td>
+						<td id="time_6">
+							
+						</td>
+						<td id="from_6">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_7">
+							
+						</td>
+						<td id="author_7">
+							
+						</td>
+						<td id="time_7">
+							
+						</td>
+						<td id="from_7">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_8">
+							
+						</td>
+						<td id="author_8">
+							
+						</td>
+						<td id="time_8">
+							
+						</td>
+						<td id="from_8">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_9">
+							
+						</td>
+						<td id="author_9">
+							
+						</td>
+						<td id="time_9">
+							
+						</td>
+						<td id="from_9">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_10">
+							
+						</td>
+						<td id="author_10">
+							
+						</td>
+						<td id="time_10">
+							
+						</td>
+						<td id="from_10">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_11">
+							
+						</td>
+						<td id="author_11">
+							
+						</td>
+						<td id="time_11">
+							
+						</td>
+						<td id="from_11">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_12">
+							
+						</td>
+						<td id="author_12">
+							
+						</td>
+						<td id="time_12">
+							
+						</td>
+						<td id="from_12">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_13">
+							
+						</td>
+						<td id="author_13">
+							
+						</td>
+						<td id="time_13">
+							
+						</td>
+						<td id="from_13">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_14">
+							
+						</td>
+						<td id="author_14">
+							
+						</td>
+						<td id="time_14">
+							
+						</td>
+						<td id="from_14">
+							
+						</td>
+					</tr>
+                                        <tr class="mycolor1">
+
+						<td id="topic_15">
+							
+						</td>
+						<td id="author_15">
+							
+						</td>
+						<td id="time_15">
+							
+						</td>
+						<td id="from_15">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_16">
+							
+						</td>
+						<td id="author_16">
+							
+						</td>
+						<td id="time_16">
+							
+						</td>
+						<td id="from_16">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_17">
+							
+						</td>
+						<td id="author_17">
+							
+						</td>
+						<td id="time_17">
+							
+						</td>
+						<td id="from_17">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_18">
+							
+						</td>
+						<td id="author_18">
+							
+						</td>
+						<td id="time_18">
+							
+						</td>
+						<td id="from_18">
+							
+						</td>
+					</tr>
+					<tr class="mycolor1">
+
+						<td id="topic_19">
+							
+						</td>
+						<td id="author_19">
+							
+						</td>
+						<td id="time_19">
+							
+						</td>
+						<td id="from_19">
+							
+						</td>
+					</tr>
+					<tr class="mycolor">
+
+						<td id="topic_20">
+							
+						</td>
+						<td id="author_20">
+							
+						</td>
+						<td id="time_20">
+							
+						</td>
+						<td id="from_20">
+							
+						</td>
+					</tr>
+                                         
+				</tbody>
+			</table>
+			<div class="scott">
+                <span><a href="?page=1" onclick="first()">首页</a></span>
+                <span class="disabled" id="span_01">&lt;</span>
+                <span class="current" id="span_02"><a href="?page=1" id="item_02" onclick="getvalue(this)">1</a></span>
+                <span id="span_03"><a href="?page=2" id="item_03" onclick="getvalue(this)">2</a></span>
+                <span id="span_04"><a href="?page=3" id="item_04" onclick="getvalue(this)">3</a></span>
+                <span id="span_05"><a href="?page=4" id="item_05" onclick="getvalue(this)">4</a></span>
+                <span id="span_06"><a href="?page=5" id="item_06" onclick="getvalue(this)">5</a></span>
+                <span id="span_07"><a href="?page=6" id="item_07" onclick="getvalue(this)">6</a></span>
+                <span id="span_08"><a href="?page=7" id="item_08" onclick="getvalue(this)">7</a></span>
+                <span id="span_09"><a href="?page=8" id="item_09" onclick="getvalue(this)">8</a></span>
+                <span id="span_10"><a href="?page=9" id="item_10" onclick="getvalue(this)">9</a></span>
+                <span id="span_11"><a href="?page=2" id="item_11" onclick="after()">&gt; </a></span>
+                <span><a href="?page=0" onclick="last()">末页</a></span>
+                <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <span><input type="button" value="跳到" style="color:#88af3f" onclick="jump()"></span>
+                <span><input type="text" size="3" style="color:#88af3f" id="text_1" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}"></span>
+                <span style="color:#88af3f">页</span>
+            </div>
+		</div>
+	</div>
+</div>
+<div id="myDiv"></div>
+</body>
+<script language="JavaScript">
+<!--
+//使用的时候修改当前id url前后缀
+var PAGE_SIZE=20; //每页条数
+var LATEST_ID={{ current_id }};//当前id
+var LAST_ID={{ oldest_id }};//最老id
+var TOTAL_ID=LATEST_ID-LAST_ID+1;//总条数
+var TOTAL_PAGE=parseInt(TOTAL_ID/PAGE_SIZE)+1;//总页数
+var PRE_URL="/id/";//url前缀
+var POST_URL="";//url后缀
+var current_span_id="span_02";//当前选中
+var current_page={{ current_page }};//当前页数
+var CURRENT_ID = LATEST_ID - (current_page-1)*PAGE_SIZE;
+
+view(CURRENT_ID);
+change(current_page);
+
+function view(c_id) //通过当前id显示一个页面的内容
+{
+    for (var i=0;i<PAGE_SIZE;i++)
+    {
+        var p=c_id-i;
+        var j=i+1;
+        var url=PRE_URL+p+POST_URL;
+        var ti="time_"+j;
+        var f="from_"+j;
+        var a="author_"+j;
+        var to="topic_"+j;
+        if (p < LAST_ID)
+        {
+        	document.getElementById(ti).style.display="none";
+        	document.getElementById(f).style.display="none";
+        	document.getElementById(a).style.display="none";
+        	document.getElementById(to).style.display="none";
+        
+        }
+        else {getdata(url,ti,f,a,to,j);}
+    }
+    function getdata(url,ti,f,a,to,j)   //从服务器获取json
+    {
+        $.get(url, function(response) { 
+           var s=removeHTMLTag(response);
+           s=s.replace(/(\n)+|(\r\n)+/g, "");
+           s=eval('('+s+')');  
+           setdata(s,ti,f,a,to,j);
+        });
+    
+        function removeHTMLTag(str)//去掉html标签
+        {
+            str = str.replace(/<\/?[^>]*>/g,''); //去除HTML tag
+            str = str.replace(/[ | ]*\n/g,'\n'); //去除行尾空白
+            str=str.replace(/&nbsp;/ig,'');//去掉&nbsp;
+            return str;
+        }
+    
+    
+    
+        function setdata(s,ti,f,a,to,j)//设置每一条数据
+        {
+            document.getElementById(ti).style.display="";
+            document.getElementById(f).style.display="";
+            document.getElementById(a).style.display="";
+            document.getElementById(to).style.display="";
+            document.getElementById(ti).innerHTML=s.date;
+            document.getElementById(a).innerHTML=s.publisher;
+            if (j %2 ==0)
+            {
+                document.getElementById(to).innerHTML="<a href='/news/"+p+"' target='_blank' class='a2'>"+s.title+"</a>";
+                //document.getElementById(to).innerHTML="<a href='"+s.link+"' target='_blank' class='a2'>"+s.title+"</a>";
+                document.getElementById(f).innerHTML="<a target='_blank' class='a2'>"+s.source+"</a>";
+            }
+            else
+            {
+                document.getElementById(to).innerHTML="<a href='/news/"+p+"' target='_blank'>"+s.title+"</a>";
+                //document.getElementById(to).innerHTML="<a href='"+s.link+"' target='_blank'>"+s.title+"</a>";
+                document.getElementById(f).innerHTML="<a target='_blank'>"+s.source+"</a>";
+            }
+        }
+    }
+}
+
+function change(page_1) //控制翻页按钮
+{
+    var c_c_text;
+    var c_text;
+    if (page_1 != 1) 
+    {
+    	document.getElementById("span_01").className='';
+        document.getElementById("span_01").innerHTML='<a href="?page=2" id="item_01" onclick="before()">&lt; </a>';
+    }
+    else
+    {
+    	document.getElementById("span_01").className='disabled';
+    	document.getElementById("span_01").innerHTML='&lt; ';
+    }
+    if (page_1 != TOTAL_PAGE) 
+    {
+    	document.getElementById("span_11").className='';
+    	document.getElementById("span_11").innerHTML='<a href="?page=2" id="item_11" onclick="after()">&gt; </a>';
+    }
+    else
+    {
+    	document.getElementById("span_11").className='disabled';
+    	document.getElementById("span_11").innerHTML='&gt; ';
+    }
+    page_1 = parseInt(page_1);
+    if (page_1 >=5 && page_1<= TOTAL_PAGE-5)
+    {
+    	document.getElementById("span_06").className='current';
+    	c_text='<a href="?page='+page_1+'" id="item_06" onclick="getvalue(this)">'+page_1+'</a>';
+    	document.getElementById("span_06").innerHTML=c_text;
+    	current_span_id="span_06";
+            for (var i=page_1-4;i<=page_1+4;i++)
+    	{
+    		c_text='<a href="?page='+i+'" id="item_06" onclick="getvalue(this)">'+i+'</a>';
+    		var j=i-(page_1-6); 
+    		if (j<10)
+    		{c_c_text="span_0"+j;}
+    		else
+    		{c_c_text="span_"+j;}
+    		document.getElementById(c_c_text).innerHTML=c_text;
+    	}
+    }
+    else if (page_1 <5)
+    {
+    	for (var i=2;i<=10;i++)
+    	{
+    		var j=i-1;
+    		if (i<10)
+    		{c_text='<a href="?page='+j+'" id="item_0'+i+ '"onclick="getvalue(this)">'+j+'</a>';
+    		c_c_text="span_0"+i;}
+    		else
+    		{c_text='<a href="?page='+j+'" id="item_'+i+ '"onclick="getvalue(this)">'+j+'</a>';
+    		c_c_text="span_"+i;}
+    		document.getElementById(c_c_text).innerHTML=c_text;
+    	}
+    	var xid=parseInt(page_1)+1;
+    	var c_span="span_0"+xid;
+    	document.getElementById(c_span).className='current';
+    	current_span_id=c_span;
+    }
+    else
+    {
+    	for (var i=TOTAL_PAGE-8;i<=TOTAL_PAGE;i++)
+    	{
+    		var j=i-(TOTAL_PAGE-10);
+    		if (j<10)
+    		{c_text='<a href="?page='+i+'" id="item_0'+j+ '"onclick="getvalue(this)">'+i+'</a>';
+    		c_c_text="span_0"+j;}
+    		else
+    		{c_text='<a href="?page='+i+'" id="item_'+j+ '"onclick="getvalue(this)">'+i+'</a>';
+    		c_c_text="span_"+j;}
+    		document.getElementById(c_c_text).innerHTML=c_text;
+    	}
+    	var xid=page_1-(TOTAL_PAGE-10);
+    	var c_span;
+    		if (xid<10)
+    		{c_span="span_0"+xid;}
+    		else
+    		{c_span="span_"+xid;}
+    	document.getElementById(c_span).className='current';
+    	current_span_id=c_span;
+    }
+}
+
+function getvalue(obj)  //点击按钮
+{
+    var value=null;
+    if (obj){
+        value=obj.innerHTML;
+    }
+    var page;
+    page=parseInt(value);
+    var offset=CURRENT_ID-(page-1)*PAGE_SIZE;
+    view(offset);
+    current_page=page;
+    document.getElementById(current_span_id).className='';
+    change(current_page);
+}
+
+function before()  //点击上一条
+{
+    var page=current_page-1;
+    var offset=CURRENT_ID-(page-1)*PAGE_SIZE;
+    view(offset);
+    document.getElementById(current_span_id).className='';
+    current_page=page;
+    change(current_page);
+}
+
+function after()  //点击下一条
+{
+    var page=current_page+1;
+    var offset=CURRENT_ID-(page-1)*PAGE_SIZE;
+    view(offset);
+    document.getElementById(current_span_id).className='';
+    current_page=page;
+    change(current_page);
+}
+
+function first()     //首页
+{
+    var page=1;
+    var offset=CURRENT_ID-(page-1)*PAGE_SIZE;
+    view(offset);
+    document.getElementById(current_span_id).className='';
+    current_page=page;
+    change(current_page);
+}
+
+function last()      //末页
+{
+    var page=TOTAL_PAGE;
+    var offset=CURRENT_ID-(page-1)*PAGE_SIZE;
+    view(offset);
+    document.getElementById(current_span_id).className='';
+    current_page=page;
+    change(current_page);
+}
+
+function jump() //跳转
+{
+    var page=document.getElementById("text_1").value;
+    if (page > TOTAL_PAGE)
+    {
+    	alert("超过最大页数");
+    }
+    else
+    {
+        var offset=CURRENT_ID-(page-1)*PAGE_SIZE;
+        view(offset);
+        document.getElementById(current_span_id).className='';
+        current_page=page;
+        change(current_page);
+    }
+}
+
+//-->
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCYTPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Indoor Map</title>
+        <style type="text/css">
+            html{height: 100%}
+            body{height: 100%; margin: 0px; padding-top: 50px}
+            #container{height: 100%}
+        </style>
+            <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&amp;ak=8c4614c8d9f809f40854d84237a39f0c">
+        </script>
+        <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+        <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+        <!-- <link rel="stylesheet" href="{{ static_url("css/about/about.css") }}"> -->
+    </head>
+
+    <body>
+        {% module NavbarPedestal(user, url, login_state) %}
+        <div id="container"></div>
+        <script src="/static/flat-ui/js/jquery-2.0.3.min.js"></script>
+        <script src="/static/script/indoor/basic.js")}}"></script>
+        <script type="text/javascript">
+            function __js_debug_msg() {
+                var mydiv = document.createElement('div');
+                mydiv.id = "js_debug_msg";
+                mydiv.setAttribute('style',
+                        'position:fixed;width:300px;height:40px;padding:5px;background:#333;line-height:20px;color:#FFF;margin-top:100px;top:0px;right:0px');
+                mydiv.innerHTML="print js debug message.";
+                document.body.appendChild(mydiv);
+            }
+            __js_debug_msg();
+        </script>
+
+        <script type="text/javascript">
+            var point = new BMap.Point(121.825, 39.092);
+            var map = new BMap.Map("container", {mapType: BMAP_HYBRID_MAP});
+            map.centerAndZoom(point, 18);
+
+            jQuery.getJSON("http://pedestal.cn:3358/jsongetxy?lat="+"121.825"+"&lng="+"39.092"+"&ran="+"1000"+"&callback=?", function(json){
+                //alert(json.length);
+                for ( var i=0; i<json.length; i++ )
+                {
+                    detail = getBuildingDetail(json[i]);
+                }
+            })
+            navigator.geolocation.getCurrentPosition(function(position){
+                var lng = position.coords.longitude;
+                var lat = position.coords.latitude;
+
+                jQuery.getJSON("http://pedestal.cn:3358/jsongetxy?lat="+lat+"&lng="+lng+"&ran="+"1000"+"&callback=?", function(json){
+                    //alert(json.length);
+                    for ( var i=0; i<json.length; i++ )
+                    {
+                        detail = getBuildingDetail(json[i]);
+                    }
+                })
+            })
+
+            //var AIcon = new BMap.Icon("www.pedestal.cn:3358/static/buildings/1/avator.jpg", new
+            //        BMap.Size(800, 400));
+            //var marker = new BMap.Marker(point, {icon: AIcon});
+            //map.addOverlay(marker);
+            //function addMarker(point, index){
+            //    var myIcon = new BMap.Icon("/static/buildings/1/avator.jpg", new
+            //            BMap.Size(23, 25), {offset: new BMap.Size(10, 25), imageOffset: new
+            //            BMap.Size(0, 0)});
+            //    var marker = new BMap.Marker(point, {icon: myIcon});
+            //    map.addOverlay(marker);
+            //}
+            //var bounds = map.getBounds();
+            //alert(bounds.maxX);
+            //var lngSpan = bounds.maxX - bounds.minX;
+            //var latSpan = bounds.maxY - bounds.minY;
+            //for (var i=0; i<10; i++) {
+            //    var point = new BMap.Point(bounds.minX + lngSpan *
+            //            (Math.random() * 0.7 + 0.15), bounds.minY + latSpan *
+            //            (Math.random() * 0.7 + 0.15));
+            //    addMarker(point, i);
+            //}
+            //addMarker(point, 0);
+            
+            map.enableScrollWheelZoom();
+            map.addControl(new BMap.NavigationControl());
+            map.addControl(new BMap.ScaleControl());
+            map.addControl(new BMap.MapTypeControl());
+            map.addControl(new BMap.GeolocationControl());
+            window.setTimeout(function(){
+                    map.panTo(new BMap.Point(121.825, 39.092));
+                },2000);
+            
+        </script>
+        
+        </body>
+</html>

@@ -1,0 +1,27 @@
+.flat-block {
+	background: #f0f2f4;
+	border: 1px solid #DDD;
+    padding: 20px 0 0 30px;
+    margin-left:10px;
+}
+
+
+.flat-block p {
+    margin: 0;
+}
+
+.flat-block-body {
+    margin-bottom: 10px;
+}
+
+.flat-block-body p{
+    font-size: 16px;
+}
+
+
+
+.img-sm {
+	width: 240px;
+	height: 300px;
+	margin-top: -43px;
+}

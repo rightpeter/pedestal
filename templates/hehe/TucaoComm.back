@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ static_url("basic.css") }}">
+<link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+<link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+</head>
+<body>
+<div class="container">
+  <articl>
+    <section>
+      <div class="post">
+        <div class="post-header">
+          <h4 class="post-title">{{ title }}</h4>
+          <p class="post-meta">发布人:<span class="post-author">{{ publisher}}</span>
+          &nbsp;&nbsp;&nbsp;发表时间: {{ date }}</p>
+        </div>
+        <div class="post-description">
+          <p class="body-abstract">{{ clean_body.lstrip()[:150] }} ... <a > MORE </a> </p>
+          <div class="body-full" style="display: none;"><div>{% raw body %}</div></div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <hr />
+  <div clas="row">
+    <div class="form-group">
+      <textarea class="form-control" rows="2" id="content" name="content"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <div class="col-md-10">
+        <p id="rest-num"></p>
+      </div>
+      <div class="col-md-2">
+        <input type="hidden" id="id" name="id"  value="{{ nid }}"/>
+        <div class="btn btn-block btn-info" id="tucao-submit">吐槽</div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div>
+    {% for comm in commList %}
+    <div  class="row one-level" id="{{ comm.level }}">
+      <div class="col-md-1 level-num">
+        <p>{{ comm.level }} 楼</p>
+      </div>
+      <div class="col-md-9 level-content">
+        <p>{{ comm.content }}</p>
+      </div>
+      <div class="col-md-2 level-reply">
+        <a>回复</a>
+      </div>  
+    </div>
+    {% end %}
+  </div>
+  <article>
+    <div id="news-links-fixed">
+        <div class="btn btn-inverse" id="prevpage">上一条</div>
+        <div class="btn btn-inverse" id="nextpage">下一条</div>
+    </div>
+  </article>
+  </body>
+  <div class="scripts">
+    <script src="{{ static_url("script/jquery-latest.js") }}"></script>
+    <script src="{{ static_url("flat-ui/js/bootstrap.min.js") }}"></script>
+    <script src="{{ static_url("script/basic.js") }}"></script>
+  </div>
+  </html>

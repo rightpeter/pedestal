@@ -1,0 +1,44 @@
+.info-block {
+	width: 100%;
+	height: 350px;
+	background: none repeat scroll 0% 0% rgb(245, 247, 247);
+	display: block;
+	padding: 20px 10px 30px;
+}
+
+.img-md {
+	width: 250px;
+	height: 300px;
+}
+
+.img-sm {
+	width: 100px;
+	height: 100px;
+}
+
+.header {
+	border-bottom:1px #ccc solid; 
+	width:340px; 
+	margin-bottom:15px;
+	font-weight:bold;
+}
+
+.intro-block {
+	line-height:20px;
+	font-size: 18px;
+	color: rgb(92, 88, 80);
+}
+
+.intro-block p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+.footer {
+	background:rgb(250,250,250); 
+	width: 100%; 
+	min-height: 170px;
+	border-top: 1px #ddd solid;
+	margin-top: 30px;
+}

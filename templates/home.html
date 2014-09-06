@@ -1,0 +1,57 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}"> 
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}"> 
+    <link rel="stylesheet" href="{{ static_url("css/myui.css") }}"> 
+</head>
+<body style="">
+{% module NavbarPedestal(user, url, login_state) %}
+	<div class="container" style="margin-top:100px">
+		<div class="row" >
+			<div class="col-md-10 flat-block book-radius-sm">
+			<div class="col-md-3">
+				<div class="center-block" >
+					<img class="img-thumbnail img-sm"
+                    src="/static/images/avatar/{{ avatar_file }}">
+					<p style="text-align:center; font-size:1.4em;margin-left:-60px;">{{ home_name }}</p>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="lead" style="padding-top:50px;">
+					<!-- some basic profiles-->
+					<p>你只闻到我的香水，却没看到我的汗水。你有你的规则，我有我的选择。
+					<p>你嘲笑我一无所有 不配去爱，我可怜你总是等待。你可以嘲笑我们的年轻，但我们会证明这是谁的时代。</p>
+				</div>
+			</div>
+		</div>
+	</div> <!-- End of personal header -->
+
+		<div class="container" id="dynamic-info-container">
+			<div class="row">
+				<div class="col-md-5" style="padding-top:20px;padding-right:10px;">
+					<div class="flat-block book-radius-sm">
+						<div class="flat-block-head">
+							<h6>My Dynamics</h6>
+							<p>-----------------------------------------------------------------</p>
+						</div>
+						<div class="flat-block-body">
+							<a
+                                href="/news/1003667"><p>《英语听说（一）》重修班开课通知</p></a>
+							<p>Dis:  Diao zha tian</p>
+						</div>
+						<div class="flat-block-body">
+							<a
+                                href="/news/1003667"><p>《英语听说（一）》重修班开课通知</p></a>
+							<p>Dis:  Diao zha tian</p>
+						</div>
+						<div class="flat-block-body">
+							<a
+                                href="/news/1003667"><p>《英语听说（一）》重修班开课通知</p></a>
+							<p>Dis:  Diao zha tian</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+</body>
+</html>

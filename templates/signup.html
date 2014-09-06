@@ -1,0 +1,136 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+
+
+	<!-- 最新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+	<link rel="stylesheet" href="{{ static_url("bootstrap/css/bootstrap-responsive.min.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+	<link rel="stylesheet" href="{{ static_url("css/signup.css") }}">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="{{ static_url("script/jquery-latest.js") }}"></script>
+    <script src="{{ static_url("script/jquery.cookie.js") }}"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="{{ static_url("bootstrap/js/bootstrap.min.js") }}"></script>
+
+    <script src="{{ static_url("script/signup.js") }}"></script>
+    <script src="{{ static_url("flat-ui/js/flatui-checkbox.js") }}"></script>
+
+
+	<style>
+	</style>
+</head>
+<body>
+
+    {% module NavbarPedestal(user, url, login_state) %}
+	<div class="container" style="margin-top:100px">
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+
+			<div class="col-md-6 block-3d-1x" >
+                {% if user.has_key('vip') %}
+                <div class="progress"
+                    style="margin-bottom:0px;margin-top:16px;height:30px;font-size:18px;">
+                  <div class="progress-bar"
+                      style="width:33%;padding-top:10px;">免费注册</div>
+                  <div class="progress-bar progress-bar-warning"style="width:33%;padding-top:10px;">验证</div>
+                  <div class="progress-bar
+                      progress-bar-success"style="width:33%;padding-top:10px;">注册成功</div>
+                </div>
+                <div style="width:80%;padding-top:40px;padding-bottom:30px;margin:0 auto">
+                    <p>您已成功激活账号。</p>
+                    <p><a href="/">进入首页</a></p>
+                </div>
+                {% elif user.has_key('guest') %}
+                <div class="progress"
+                    style="margin-bottom:0px;margin-top:16px;height:30px;font-size:18px;">
+                    <div class="progress-bar"style="width:33%;padding-top:10px;">免费注册</div>
+                    <div class="progress-bar progress-bar-warning"style="width:33%;padding-top:10px;">验证</div>
+                    <div class="progress-bar progress-bar-danger"style="width:33%;padding-top:10px;">注册成功</div>
+                </div>
+                <div style="width:80%;padding-top:40px;padding-bottom:30px;margin:0 auto">
+                    <p>验证邮件已发送至你的邮箱，验证后你将成为本站的正式会员。</p>
+                    <p><a href="/api/check?name={{ user['guest']['name'] }}">点击重发</a></p>
+                </div>
+                {% else %}
+                <div class="progress"
+                    style="margin-bottom:39px;margin-top:16px;height:30px;text-align:center;">
+                    <div class="progress-bar"
+                    style="padding-top:10px;width:33%">免费注册</div>
+                    <div class="progress-bar progress-bar-danger"style="width:33%;padding-top:10px;">验证</div>
+                    <div class="progress-bar progress-bar-danger"style="width:33%;padding-top:10px;">注册成功</div>
+                </div>
+
+			    <form class="form-horizontal" role="form" method="post"
+                    action="/signup"style="padding-right:100px" >
+			        <fieldset>
+			            <div id="legend" class=""></div>
+			            <div class="form-group">
+			            <!-- Email input-->
+			                <label class="col-md-3 control-label" for="email-address">邮箱</label>
+			                <div class="col-md-9">
+			                    <input type="email" name="email" id="email-address" placeholder="输入你的邮箱地址" class="form-control">
+			                    <p class="help-block"></p>
+                                {% raw xsrf_form_html() %}
+			                </div>
+			            </div>
+			
+			            <div class="form-group">
+			            <!-- Nickname input-->
+			                <label class="col-md-3 control-label" for="nick-name">昵称</label>
+			                <div class="col-md-9">
+			                    <input type="text" name="name" id="nick-name" placeholder="输入昵称" class="form-control">
+			                    <p class="help-block"></p>
+			                </div>
+			            </div>
+			    
+			            <div class="form-group">
+			            <!-- Text input-->
+			                <label class="col-md-3 control-label" for="password">密码</label>
+			                <div class="col-md-9">
+			                    <input type="password" name="password" id="password" placeholder="输入密码" class="form-control">
+			                    <p class="help-block">推荐8-16位字母、数字组合</p>
+			                </div>
+                        </div>
+
+                        <div class="form-group">
+			            <!-- Text input-->
+			                <label class="col-md-3 control-label" for="password-confirmation">确认密码</label>
+			                <div class="col-md-9">
+			                    <input type="password" name="repassword" id="password-confirmation" placeholder="请再输入一次密码" class="form-control">
+			                    <p class="help-block"></p>
+			                </div>
+			            </div>
+			
+			            <div class="form-group">
+                            <div class="col-md-9 col-md-offset-3">
+			                <!-- Multiple Checkboxes -->
+                                <label class="checkbox" for="checkbox1">
+                                    <input type="checkbox" checked="checked" name="is_subscribed" value="" id="checkbox1" data-toggle="checkbox">
+                                        邮件接收软件学院学生周知新闻
+                                </label>
+                            </div>
+			            </div>
+			
+			            <div class="form-group">
+			            <!-- Button -->
+			                <div class="col-xs-offset-4">
+			                    <button class="btn btn-success disabled" id="submit">完成注册</button>
+			                </div>
+			            </div>
+			        <fieldset>
+			    </form>
+              
+            {% end %}
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+	</div>
+</body>
+

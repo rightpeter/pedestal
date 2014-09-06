@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <title></title>
+</head>
+<body style="background-color: rgba(200, 200, 200, 0.6)">
+    {% module NavbarPedestal(user, url, login_state) %}
+    <br/>
+    <br/>
+    {% module List(lid, lclass, elements) %}
+    <div id="indoor_map">
+        {% raw indoor_map %}
+    </div>
+    <!-- 替换svg整个标签就行了 -->
+    
+    
+<script src="/static/flat-ui/js/jquery-2.0.3.min.js"></script>
+<script src="/static/flat-ui/js/bootstrap.min.js"></script>
+<script src="/static/script/indoor/model.js"></script>
+<script src="/static/script/indoor/JSONL.js"></script>
+<script>
+  /*  $('a').tooltip();
+    var option = {
+        html: false,
+        placement: 'top',
+        trigger: 'click',
+        title: 'title',
+        content: 'content',
+        container: 'body'
+    };*/
+
+    console.log('svg#indoor_map');
+    console.log($('svg#indoor_map').innerHTML);
+    $('svg').children().each(function(){
+        console.log(this.id);
+        if(this.id) {
+            BuildingService.setPopoverDetail(this.id);
+        }
+    });
+
+</script>
+</body>
+</html>

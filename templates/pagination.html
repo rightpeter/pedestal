@@ -1,0 +1,24 @@
+<!-- <html>
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <script src="{{ static_url("flat-ui/bootstrap/js/bootstrap.js") }}"></script>
+<body> -->
+
+<script>
+    var startPage = {{ current_page }};
+    var total_pages = {{ total_pages}};
+    var visible_pages = {{ visible_pages }};
+    var current_page = {{ current_page }};
+</script>
+
+<div id="content-wrapper">
+    <div class="inner clearfix">
+        <section id="main-content">
+            <p>
+                <div class="text-center">
+                    <ul id="pagination-demo" class="pagination-sm"></ul>
+                </div>
+            </p>
+        </section>
+        <label id="page-content"></label>
+    </div>
+</div>

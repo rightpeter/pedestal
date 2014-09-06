@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+<link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+<!-- <link rel="stylesheet" href="{{ static_url("css/index/carousel.css")}}">    -->
+<link rel="stylesheet" href="{{ static_url("css/about/about.css") }}">
+</head>
+<body style="padding-bottom: 0px;">
+{% module NavbarPedestal(user, url, login_state) %}
+<div class="carousel-inner" style="margin-top:40px">
+    <div style="background:url(/static/images/pedestal_welcome.jpg);background-size:100%;  color:#eee; min-width:100%; height:400px;"></div>
+	<div class="container">
+		<div class="carousel-caption">
+			<h4 class="text-center" style="font-size:100px;">Pedestal</h4>
+			<h2>&nbsp</h2>
+			<a class="btn btn-lg btn-primary btn-shadow bs3-link"
+                style="box-shadow: 0px -5px 0px rgb(34,151,132) inset;letter-spacing:.1em" role="button" target="_blank" href="/signup">加入我们!</a>
+		</div>
+	</div>
+</div>
+<div class="center-block" style="width:100%;color:#111;background-color:#eee;padding:10px 40px 20px;">
+	<div class="container">
+		<h4 class="text-center"><strong>项目实验室</strong></h4>
+        <p class="text-center">在这里，你可以找到Pedestal旗下的所有应用。</p>
+		<p>
+	    </p>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+	<ul class="media-list">
+        <li class="media info-block">
+			<a class="pull-left col-md-3" href="/index">
+				<img class="image-object img-rounded img-md" src="{{ static_url("images/tucao_ico.jpg") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+                    <h4 class="media-heading header" ><a
+                            href="/index">周知吐槽</a></h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+				            <h6>当你看到天泪滚滚的学生周知时，你还在为没有吐槽之处感到闷闷不乐嘛？当你在周知中看到自己的朋友，你想迅速调戏一发嘛？你有很多想对软院诉说的感情嘛？周知吐槽满足你的需求！</h6>
+						</div>
+                        <p
+                        style="color:black"><p>
+					</div>
+				</div>
+			</div>
+		</li>
+        <li class="media info-block">
+			<a class="pull-left col-md-3" href="http://115.28.174.83:2500/">
+				<img class="image-object img-rounded img-md" src="{{ static_url("images/teachers.png") }}"  alt="">
+			</a>
+			<div class="media-body col-md-7">
+				<div class=""style="margin-top: 40px;">
+                    <h4 class="media-heading header" ><a
+                            href="http://115.28.174.83:2500/">可爱的老师</a></h4>
+					<div class="text-primary lead">
+						<div class="intro-block">
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+                        <p
+                        style="color:black"><p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+	</ul>
+</div>
+
+
+<div class="footer"> 
+	<div class="row" style="text-align:center; vertical-align: middle;">
+		<div class="center-block">
+		<br><br>
+		<p>本节目由bilibili动画  提供</p>
+		<p>一个气泡形状的提示（Tooltip）控件，可以在其围绕的元素周围做360度任意定位。 </p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

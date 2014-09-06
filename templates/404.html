@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>404</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}"   >
+</head>
+
+<body>
+    {% module NavbarPedestal(user, url, login_state) %}
+<div class="container" style="margin-top:40px">
+	<div class="center-block" style="width:700px">
+		<img src="http://static.hdslb.com/error/404.png" >
+		<p id="error-info"></p>
+	</div>
+</div>
+
+
+    <script src="{{ static_url("script/jquery-2.0.3.min.js") }}"></script>
+</body>
+</html>
+
+<script>
+	$('#error-info').html('请求地址:  '+window.location.href);
+</script>

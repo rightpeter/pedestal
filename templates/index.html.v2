@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/style.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/carousel.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/basic.css") }}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<!-- Navbar content -->
+		<div class="container">
+			<div class="navbar-header">
+		    <a class="navbar-brand" href="#">Pedetal</a>
+		  	</div>
+			<ul class="nav navbar-nav ">
+				<li>
+					<a href="#">项目实验室</a>
+				</li>
+    			<li>
+      				<a href="/index">
+						周知新闻	
+        			<!-- Indicator with number -->
+                    <!-- <span class="navbar-new">2</span> -->
+     				 </a>
+  				</li>
+				<li>
+					<a href="#">关于我们</a>
+				</li>
+			</ul>
+			<div class="navbar-right" style="padding-top:10px">
+                <div class="link-list">
+                    <a href="#" class="btn-link navbar-link">Username</a>&nbsp;|
+                    <a href="#" class="btn-link
+                        navbar-link"><small>Profile</small></a>
+                            <a href="#" class="btn-link
+                                navbar-link"><small>Logout</small></a>
+                </div>
+			</div>
+		</div>
+		</nav>
+
+
+	</div>
+		<div class="banner">
+			<ul>
+				 <li style="background-image: url(/static/images/tucao_slide.jpg);background-size:100%;">
+					<div class="inner" height="415px">
+						<h1>&nbsp;</h1>
+						<p>尽情地为自己呐喊</p>
+						<a class="btn btn-lg btn-info"href="/index">开始吐槽</a>
+					</div>
+		
+				</li>
+				 <li style="background-image: url(/static/images/slide2.jpg);background-size:100%;">
+					<div class="inner">
+						<h1>这只是一个大标题</h1>
+						<p>用来测试轮播插件这个复杂的东西</p>
+						<a class="btn btn-lg btn-info" href="#">测试</a>
+					</div>
+				 </li>
+				 <li style="background-image: url(/static/images/slide3.jpg);background-size:100%;">
+					<div class="inner">
+						<h1>这只是一个大标题</h1>
+						<p>用来测试轮播插件这个复杂的东西</p>
+						<a class="btn btn-lg btn-info" href="#">测试</a>
+					</div>
+				 </li>
+			</ul>
+			<a class="unslider-arrow prev left carousel-control" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="unslider-arrow next right carousel-control" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+
+
+	<div class="container market">
+		<div class="row top-blank">
+			<div class="col-lg-4">
+				<img class="img-circle" src="/static/images/tucao_ico.jpg" style="width:160px; height:140px;">
+				<h2>学生周知</h2>
+				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-circle" src="/static/images/xhr.jpeg" style="width:150px; height:140px;">
+				<h2>小黄人</h2>
+				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-circle" src="/static/images/lab.jpg" style="width:160px; height:140px;">
+				<h2>项目实验室</h2>
+				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+			</div>
+		</div>
+	</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ static_url("flat-ui/js/jquery-2.0.3.min.js") }}"></script>
+    <script src="{{ static_url("script/unslider.min.js") }}"></script>
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ static_url("flat-ui/js/bootstrap.min.js") }}"></script>
+    <script src="{{ static_url("script/index/basic.js") }}"></script>
+  </body>
+</html>

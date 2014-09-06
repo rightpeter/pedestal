@@ -1,0 +1,90 @@
+body {
+	background: rgb(35, 143, 177);
+}
+.flat-block {
+	background: #f7f7f9;
+	border: 1px solid #DDD;
+    padding: 20px 20px 20px 30px;
+#    margin-left:10px;
+}
+
+
+.flat-block p {
+    margin: 0;
+}
+
+.flat-block-title {
+	border-bottom:1px #ddd solid;
+}
+
+.flat-block-body {
+    margin-bottom: 10px;
+	padding: 20px 20px 20px;
+	background: #f0f2f4;
+}
+
+.flat-block-body p{
+    font-size: 17px;
+}
+
+
+
+.img-sm {
+	width: 240px;
+	height: 270px;
+	margin-top: -43px;
+}
+
+
+.book-radius-md{
+	border-radius: 10px 30px 29px 10px;
+	box-shadow: 2px 2px 3px rgb(141, 140, 139);
+}
+
+.book-radius-sm{
+	border-radius: 7px;
+	box-shadow: 1px 1px 2px rgb(141, 140, 139);
+}
+
+.margin-bottom-md {
+	margin-bottom:50px;
+}
+
+.margin-bottom-sm {
+	margin-bottom: 20px;
+}
+
+.pager-bs {
+	padding-left: 0;
+	margin: 20px 0;
+	text-align: center;
+	list-style: none;
+}
+
+.pager-bs .previous>a, .pager-bs .previous>span {
+	float: left;
+}
+
+.pager-bs .next>a, .pager-bs .next>span {
+	float: right;
+}
+
+.pager-bs li>a, .pager-bs li>span {
+	display: inline-block;
+	padding: 5px 14px;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	border-radius: 25px;
+}
+
+#.pager-bs a:-webkit-any-link {
+#	color: -webkit-link;
+	text-decoration: underline;
+	cursor: auto;
+}
+
+.pager-bs a {
+	font-size: 12px;
+	#color: #428bca;
+	text-decoration: none;
+}

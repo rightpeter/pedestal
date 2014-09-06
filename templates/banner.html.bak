@@ -1,0 +1,24 @@
+<div class="banner">
+ 	<ul>
+        {% for slide in slides %}
+        <li style="background-image: url(/static/images/{{ slide['image'] }});background-size:100%;">
+ 			<div class="inner">
+                <h1>&nbsp;</h1>
+                <p>&nbsp;</p>
+               
+                <!-- <h1>{{ slide['name'] }}</h1>
+                <p>{{ slide['descript'] }}</p> -->
+                <a class="btn btn-primary btn-shadow" href="{{ slide['href'] }}">{{ slide['button'] }}</a>
+ 			</div>
+ 		</li>
+        {% end %}
+ 	</ul>
+ 	<a class="unslider-arrow prev left carousel-control" data-slide="prev">
+ 		<span class="glyphicon glyphicon-chevron-left"></span>
+ 	</a>
+ 	<a class="unslider-arrow next right carousel-control" data-slide="next">
+ 		<span class="glyphicon glyphicon-chevron-right"></span>
+ 	</a>
+</div>
+
+

@@ -1,0 +1,33 @@
+
+<div id="carousel-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+ 	<ol class="carousel-indicators">
+        {% for i,slide in enumerate(slides) %}
+        <li data-target="#carousel-generic" data-slide-to="{{ i }}" 
+        {% if not i %} {{ 'class=active' }} {% end %}></li>
+        {% end %}
+ 	</ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        {% for i,slide in enumerate(slides) %}
+        <div class="item {% if not i %} {{ 'active' }} {% end %}">
+            <img src="/static/images/{{ slide['image'] }}" alt="{{ slide['descript'] }}">
+            <div class="carousel-caption">
+                <button class="btn btn-lg btn-primary btn-embossed">
+                        <a href="{{ slide['href'] }}"style="font-weight:bold;color:floralwhite;"> {{ slide['button'] }} </a></button>
+            </div>
+        </div>
+        {% end %}
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-generic" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-generic" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+

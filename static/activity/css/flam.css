@@ -1,0 +1,88 @@
+
+.footer-cooperate{
+	background-color: #1abc9c;
+	color: #cff3ec;
+	padding: 0 30px 30px;
+}
+.footer-cooperate ul li a{
+	color: #b7f5e9;
+	text-decoration:underline;
+}
+.footer-cooperate ul li a:hover{
+	color: #b7f5e9;
+	text-decoration:none;
+}
+
+footer{
+	margin-top: 30px;
+}
+footer span{
+	margin-left: 60px;
+}
+.demo-headline {
+  color: #1abc9c;
+  font: 700 100px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  padding: 40px 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+.col-xs-3 p{
+	height: 60px;
+}
+.activities{
+	margin-bottom: 30px;
+}
+
+.actv-title{
+	border-bottom: dashed; 
+}
+.video-about-us{
+  background: url(../images/imac.png) no-repeat center top;
+  background-size: 940px 778px;
+  color: #ffffff;
+  margin-bottom: 77px;
+  padding: 38px 38px 267px;
+}
+.video-screen{
+	background-color: #eff0f2;
+    min-height: 473px;
+    padding: 123px 199px 33px 306px;
+    position: relative;
+}
+.video-sutra{
+	background-color: transparent;
+	position: absolute;
+	top: -2px;
+	left: -1px;
+	width: 870px;
+	padding: 0;
+	vertical-align: middle;
+	border-radius: 6px 6px 0 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.tip-messages{
+	position: relative;
+	min-height: 300px;
+}
+
+.tip-messages #info-detail{
+	display: none;
+}
+#info-detail a{
+	color: #fff;
+	padding: 0 10px;
+}
+.tip-messages:hover #info-detail{
+	display: block;
+	position: absolute;
+	background-color: rgba(0,0,0,0.8);
+	padding: 5px 6px 5px 6px;
+	border-radius: 3px;
+	bottom: 0px;
+	min-width: 180px;
+}

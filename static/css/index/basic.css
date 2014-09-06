@@ -1,0 +1,32 @@
+.col-lg-4 {
+	text-align: center;
+}
+
+.col-lg-4 h2 {
+    padding-bottom: 0px;
+}
+
+body {
+	background: #eee;
+}
+
+.top-blank {
+	margin-top: 50px;
+}
+
+.banner {
+    margin-top: 50px;
+}
+
+.banner ul li a{
+   #background:#7300FF;
+}
+
+.banner .inner{
+    height: 475px;
+}
+.navbar-right a{
+    display: inline-block;
+    vertical-align: middle;
+}
+

@@ -1,0 +1,9 @@
+<div id="{{ lid }}" class="{{ lclass }}">
+    <ul>
+    {% for element in elements %}
+        <li>
+        <a href="{{ element['href']}}">{{ element['content'] }}</a>
+        </li>
+    {% end %}
+    </ul>
+</div>

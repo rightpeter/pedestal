@@ -1,0 +1,84 @@
+﻿</!DOCTYPE HTML>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/style.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/carousel.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/basic.css") }}">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+
+    <style>
+        .text-title{
+            text-shadow: 3px 3px 3px #A8AEB3;
+            font-size: 5em;
+            color: #3D00FF;
+            margin: 30px;
+        }
+        
+        .table-responsive table{
+            color: #0BC3D3;
+        }
+
+        .small{
+            font-size: 0.8em;
+        }
+        
+        BODY {
+            FONT-SIZE: 12px;FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; PADDING-LEFT: 25px;
+        }
+    </style>
+
+    <title>周知索引</title>
+
+</head>
+
+<body style="font-size:0.8em">
+{% module NavbarPedestal(user, url, login_state) %}
+<div class="container" style="margin-top:75px">
+	<div class="row">
+		<div class="span12">
+
+            <div class="table-responsive">
+			    <table class="table table-bordered table table-striped table
+                    table-hover" >
+			    	<thead>
+			    		<tr>
+                            <!-- <th width="70%"> -->
+                            <th>
+                                <h4>标题</h4>
+			    			</th>
+			    			<th>
+                                <h4>发表人</h4>	
+			    			</th>
+			    			<th>
+                                <h4>时间</h4>
+			    			</th>
+			    			<th >
+                                <h4>来源</h4>
+			    			</th>
+			    		</tr>
+			    	</thead>
+			    	<tbody>
+                    {% for news in newsList %}
+                        <tr>
+                            <td><a class="link" href="/news/{{ news['id']}}" target='_blank' >{{ news['title'] }}</a></td>
+                            <td class="small">{{ news['publisher'] }}</td>
+                            <td class="small">{{ news['date'] }}</td>
+                            <td class="small">{{ news['source'] }}</td>
+                        </tr>
+                    {% end %}
+			    	</tbody>
+			    </table>
+            </div>
+            {% module Pagination(total_pages, current_page, visible_pages)%}
+		</div>
+	</div>
+</div>
+</body>
+</html>

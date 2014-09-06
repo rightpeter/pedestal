@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pedestal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/index/basic.css") }}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;">
+        {% module NavbarPedestal(user, url, login_state) %}
+    <div style="height:50px"></div>
+        {% module Banner(slides) %}
+	<div class="container market">
+		<div class="row top-blank">
+			<div class="col-lg-4">
+                <img class="img-circle" src="/static/images/tucao_ico.jpg" style="width:160px; height:140px;">
+                <a href="/index">
+                    <h4>学生周知</h4>
+                </a>
+                <p>当你看到天泪滚滚的学生周知时，你还在为没有吐槽之处感到闷闷不乐嘛？当你在周知中看到自己的朋友，你想迅速调戏一发嘛？你有很多想对软院诉说的感情嘛？周知吐槽满足你的需求！</p>
+			</div>
+            <div class="col-lg-4">
+                <img class="img-circle" src="/static/images/english_month.jpg" style="width:160px; height:140px;">
+                <a href="/languagesactivities">
+				  <h4>外语活动月</h4>
+                 </a>
+                 <p>忽如一夜春风来，软院语言与思维实训基地横空出世啦。基地是外语教研室旗下的一个集兴趣性和学习性为一体的组织。我们不属于团委！也不属于创新中心！这里拥有一个具有锻炼思辨能力的团队，搭建了可通过多种方式展示自己思维的平台。</p>
+			</div>
+			
+			<div class="col-lg-4">
+				<img class="img-circle" src="/static/images/lab.jpg" style="width:160px; height:140px;">
+                <a href="/project">
+				    <h4>项目实验室</h4>
+                </a>
+                <p>项目实验室是Pedestal所有应用的发布平台。在这里您将能够快速进入自己想使用的应用。也可以随时关注Pedestal各个项目的最新进展</p>
+			</div>
+
+        </div>
+        
+		<div class="row top-blank">
+            <div class="col-lg-4">
+				<img class="img-circle" src="/static/images/teachers.png" style="width:150px; height:140px;">
+                <a href="http://115.28.174.83:2500/">
+				    <h4>可爱的老师</h4>
+                </a>
+			</div>
+
+            <div class="col-lg-4">
+				<img class="img-circle" src="/static/images/xhr.jpeg" style="width:150px; height:140px;">
+				<h4>小黄人</h4>
+                <p>你喜欢小黄人嘛？你喜欢网友们变声小黄人之后的搞笑段子嘛？你也想用小黄人的声音为女神送出祝福嘛？敬请期待Pedestal即将推出的"变声小黄人"</p>
+			</div>
+
+		</div>
+	</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ static_url("flat-ui/js/jquery-2.0.3.min.js") }}"></script>
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ static_url("flat-ui/js/bootstrap.min.js") }}"></script>
+  </body>
+</html>

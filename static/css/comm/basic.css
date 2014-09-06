@@ -1,0 +1,26 @@
+.one-level {
+  border-bottom: solid #eeeeee 1px;
+}
+
+.level-reply a {
+	cursor: pointer;
+	font-style: italic;
+}
+
+.level-reply a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#news-links-fixed {
+	position: fixed;
+	right: 47px;
+	bottom: 11px;
+}
+
+.link-disable {
+    background: rgba(230,230,230,0.8);
+    background: #fff;
+    color: #888;
+    cursor: auto;   
+}

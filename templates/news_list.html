@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/myui.css") }}">
+</head>
+<body style="">
+    {% module NavbarPedestal(user, url, login_state) %}
+	<div style="height:100px"></div>
+	<div class="container">
+		<div id="news-list-container" class="flat-block col-md-10 col-md-offset-1" style="background:#fbfbfb">
+			<div class="flat-block-title margin-bottom-md">
+				<span class="glyphicon glyphicon-book"></span>
+				News List
+			</div>
+			<div class="row">
+				<div class="panel-group col-md-10 col-md-offset-1" id="accordion">
+                    {% for news in newsList %}
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<div class="panel-title">
+								<div class="row">
+									<div class="col-md-8">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ news['id'] }}" style="color: #31708f;">
+                                            {{ news['title'] }} <!-- news title -->
+										</a>
+									</div>
+									<div class="col-md-2">
+                                        <a>{{ news['date'] }}</a>   <!-- news date -->
+									</div>
+									<div class="col-md-2">
+                                        <!-- <a href="/news/{{ news['id']
+                                            }}"><span id="{{ news['id'] }}"
+                                                class="glyphicon
+                                                glyphicon-eye-open"></span> </a> -->
+                                        <a href="/news/{{ news['id'] }}">吐槽!</a>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div id="collapse{{ news['id'] }}" class="panel-collapse collapse ">
+							<div class="panel-body" style="width:95%;margin:0 auto;">
+                                {{ news['clean_body'] }}
+							</div>
+						</div>
+					</div> <!-- End of Panel -->
+                    {% end %}
+				</div> <!-- End of Row -->
+			</div> <!-- End of Panel-Group -->
+            <!-- <div style="height:100px"></div> -->
+            {% module Pagination(total_pages, current_page, visible_pages)%}
+		</div> <!-- End of News-List-Container -->
+	</div> <!-- End of Container -->
+    <script src="{{ static_url("flat-ui/js/jquery-2.0.3.min.js") }}"></script>
+    <script src="{{ static_url("flat-ui/js/bootstrap.min.js") }}"></script>
+</body>

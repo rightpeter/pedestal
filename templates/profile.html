@@ -1,0 +1,169 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ static_url("flat-ui/bootstrap/css/bootstrap.css") }}">
+    <link rel="stylesheet" href="{{ static_url("flat-ui/css/flat-ui.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/myui.css") }}">
+</head>
+<body style="">
+    {% module NavbarPedestal(user, url, login_state) %}
+	<div class="container" id="container">
+		<div style="height:100px"></div>
+		<div class="row">
+			<div class="col-md-9 col-md-offset-1">
+				<div id="profile" class="flat-block" style="background:#fbfbfb">
+					<div class="flat-block-title margin-bottom-md">
+						<span class="glyphicon glyphicon-pencil"></span>
+						Information
+					</div>
+
+					
+					<!-- profile -->
+					<div class="row">
+						<div class="col-md-9 col-md-offset-1">
+							<div class="panel-group" id="accordion">
+								
+								<!-- Email -->
+								<div class="panel panel-default" >
+									<div class="panel-heading"data-toggle="collapse" data-parent="#accordion" href="#collapse-email">
+										<div class="row">
+											<div class="col-md-2">
+												<strong>Email:</strong>
+											</div>
+											<div class="col-md-6 col-md-offset-2">
+                                                {{ user_detail['email'] }}<!-- Email -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Username -->
+								<div class="panel panel-default"> 
+									<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse-username">
+										<div class="row">
+											<div class="col-md-2">
+												<strong>Username:</strong>
+											</div>
+											<div class="col-md-6 col-md-offset-2">
+                                                {{ user_detail['name'] }}<!-- Username -->
+											</div>
+											<div class="col-md-2">
+												<a href="#">Modify</a>
+											</div>
+										</div>
+									</div>
+									<div id="collapse-username" class="panel-collapse collapse">
+										<div class="panel-body">
+											<form role="form" class="form-horizontal">
+												<label for="username" class="col-md-3" >Username: </label>
+												<div class="col-md-6" >
+													<input type="text" name="username" class="form-control">
+												</div>
+												<a id="cgname" type="submit"class="btn btn-danger btn-sm">Submit</a>
+											</form>
+										</div>
+									</div>
+								</div>
+
+								<!-- Password -->
+								<div class="panel panel-default"> 
+									<div class="panel-heading"data-toggle="collapse" data-parent="#accordion" href="#collapse-password">
+										<div class="row">
+											<div class="col-md-2">
+												<strong>Password:</strong>
+											</div>
+											<div class="col-md-6 col-md-offset-2">
+												********
+											</div>
+											<div class="col-md-2">
+												<a href="#">Modify</a>
+											</div>
+										</div>
+									</div>
+									<div id="collapse-password" class="panel-collapse collapse">
+										<div class="panel-body">
+											<form role="form" class="form-horizontal">
+												<div class="form-group">
+													<label for="old-password" class="col-md-3">Old Password: </label>
+													<div class="col-md-6">
+														<input type="password" class="form-control" name="old-password" placeholder="">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="new-password" class="col-md-3">New Password: </label>
+													<div class="col-md-6">
+														<input type="password" class="form-control"name="new-password" placeholder="">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="new-repassword" class="col-md-3">Ensure Password: </label>
+													<div class="col-md-6">
+													<input type="password" class="form-control"name="new-repassword" placeholder="">
+													</div>
+													<div class="col-md-2 col-md-offset-">
+														<a id="cgpasswd"
+                                                            type="submit"
+                                                            class="btn
+                                                            btn-danger
+                                                            btn-sm">Submit</a>
+													</div>
+												</div>
+
+											</form>
+										</div>
+									</div>
+								</div>
+
+								<!-- Avatar-->
+								<div class="panel panel-default">
+									<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse-avatar">
+										<div class="row">
+											<div class="col-md-2">
+												<strong>Avatar:</strong>
+											</div>
+											<div class="col-md-6 col-md-offset-2">
+											
+											</div>
+											<div class="col-md-2">
+												<a href="#">Modify</a>
+											</div>
+										</div>
+									</div>
+									<div id="collapse-avatar" class="panel-collapse collapse">
+										<div class="panel-body">
+											<form action="/api/cgavatar" method="post"enctype="multipart/form-data" class="form-horizontal">
+												<label for="avatar"
+                                                    class="col-md-3">Avatar: </label>
+												<div class="col-md-6">
+													<input type="file"
+                                                     class="form-control" name="avatar">
+                                                    {% raw xsrf_form_html() %}
+												</div>
+												<button type="submit"class="btn btn-danger btn-sm">Submit</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div> <!-- End of Panel-Group -->
+						</div>
+					</div> <!-- End of Row -->
+
+
+
+
+
+				</div> <!-- End of Profile -->
+			</div>
+		</div> <!-- End of Row -->
+	</div> <!-- End of Container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ static_url("flat-ui/js/jquery-2.0.3.min.js") }}"></script>
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ static_url("flat-ui/js/bootstrap.min.js") }}"></script>
+
+    <script src="{{ static_url("script/profile/profile.js") }}"></script>
+</body>
+</html>
