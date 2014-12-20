@@ -4,7 +4,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
-import tornado.database
+import torndb
 import threading
 import httplib
 import sys

@@ -9,8 +9,6 @@ import json
 import tornado.web
 import tornado.ioloop
 import tornado.httpclient
-# tornado 3.x nolonger have this. use torndb
-#import tornado.database
 import torndb
 import math
 import httplib

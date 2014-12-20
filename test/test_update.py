@@ -9,9 +9,7 @@ import time
 import json
 import tornado.web
 import tornado.ioloop
-# tornado 3.x nolonger have this. use torndb
-import tornado.database
-#import torndb
+import torndb
 import math
 import httplib
 import json

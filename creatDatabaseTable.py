@@ -3,7 +3,7 @@
 
 import db
 from db import *
-import tornado.database
+import torndb
 import sys
 
 
@@ -105,23 +105,23 @@ def installSaltingTable():
 if __name__ == "__main__":
     # db.init_db()
     # models.kv.db_inited = ''
-    if '-C' in sys.argv:
+    if '-C' or '-A' in sys.argv:
         installCommentTable()
 
-    if '-E' in sys.argv:
+    if '-E' or '-A' in sys.argv:
         installEmailTable()
 
-    if '-N' in sys.argv:
+    if '-N' or '-A' in sys.argv:
         installNewsTable()
 
-    if '-U' in sys.argv:
+    if '-U' or '-A' in sys.argv:
         installUsersTable()
 
-    if '-F' in sys.argv:
+    if '-F' or '-A' in sys.argv:
         installFllwTable()
         
-    if '-CHECK' in sys.argv:
+    if '-CHECK' or '-A' in sys.argv:
         installCheckTable()
 
-    if '-SALT' in sys.argv:
+    if '-SALT' or '-A' in sys.argv:
         installSaltingTable()

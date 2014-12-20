@@ -688,7 +688,8 @@ def init():
     ENV_DICT['total'] = myTools.get_total_news_num()
     print ENV_DICT['total']
 
-    BLACKLIST = NewsDatabase.query("""SELECT * FROM blackList""")
+    # BLACKLIST = NewsDatabase.query("""SELECT * FROM blackList""")
+    BLACKLIST = []
     ENV_DICT['blacklist'] = []
     ENV_DICT['restrict'] = {}
     for blackdict in BLACKLIST:
