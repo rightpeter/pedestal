@@ -7,8 +7,7 @@ import os
 import re
 import time
 import json
-import tornado.web
-import tornado.ioloop
+import tornado
 import torndb
 import math
 import httplib
@@ -19,9 +18,9 @@ import threading
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
-from db import *
+from model import *
 from config import *
-from myTools import *
+import util.myTools as myTools
 
 reload(sys)
 sys.setdefaultencoding('utf-8')

@@ -1,43 +1,50 @@
 #!/usr/bin/env python
-#encoding: utf-8
 
+import MySQLdb
+import hashlib, uuid
+import string
+import sys
+import os
+from os import urandom
+from random import choice
+import re
+import time
+import json
+import tornado.web
+import tornado.ioloop
+import torndb
+import math
+import httplib
+import json
+import pickle
+import datetime
+import threading
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
-import torndb
-import threading
-import httplib
-import sys
-import os
-import time
-import json
+from db import *
+from config import *
 from myTools import *
 
-ali_page = "115.28.2.165"
+NewsDatabase.reconnect()
+users = NewsDatabase.query("""SELECT name, email FROM usersTable WHERE
+        subscribed=1""")
+print users
 
-mailto_list=['rightpeter@163.com']
 
-mail_host = "smtp.163.com"
-mail_user = "pedestal_peter"
-mail_pass = "15961374343"
-mail_postfix = "163.com"
+subject = u'hehe'
+    
+context = 'hehe'
 
-def send_mail(to_list, sub, context):
-    me = mail_user + "<" + mail_user + "@" + mail_postfix + ">"
-    msg = MIMEText(context, 'html', 'utf-8')
-    msg['Subject'] = sub
-    msg['From'] = me
-    msg['To'] = ";".join(to_list)
-    try:
-        send_smtp = smtplib.SMTP()
-        send_smtp.connect(mail_host)
-        send_smtp.login(mail_user, mail_pass)
-        send_smtp.sendmail(me, to_list, msg.as_string())
-        send_smtp.close()
-        return True
-    except (Exception, e):
-        print(str(e))
-        return False
+users = [{'name':'peter', 'email':'327888145@qq.com'}, {'name':'peter', 'email':'rightpeter.lu@gmail.com'}]
+for user in users:
+    print user['name'], ':', user['email']
+    
+    if (True == myTools.send_mail([user['email']], subject, context)):
+        print "success to ", user['name']
+    else:
+        print "fail to ", user['name']
 
-if __name__=='__main__':
-    print myTools.get_a_news(1003592)
+
+
+
