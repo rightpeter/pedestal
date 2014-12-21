@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-import sys
-import os
+import os, sys
 import re
 import time
 import json
-import tornado.web
-import tornado.ioloop
-import tornado.httpclient
+import tornado
 import torndb
 import math
 import httplib
@@ -17,25 +14,26 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import util.myTools as myTools
+import util.uimodules as ui_modules
 
-from loginHandler import LoginHandler
-from logoutHandler import LogoutHandler
-from signupHandler import SignupHandler
-from newsHandler import NewsHandler
-from error404Handler import Error404Handler
-from tucaoIndexHandler import TucaoIndexHandler
-from aboutHandler import AboutHandler
-from projectHandler import ProjectHandler
-from tucaoCommHandler import TucaoCommHandler
-from homeHandler import HomeHandler
-from profileHandler import ProfileHandler
-from languagesActivitiesHandler import LanguagesActivitiesHandler
-from indoorHandler import IndoorHandler
-from indoorMapHandler import IndoorMapHandler
-from tucaoHandler import TucaoHandler
+# from loginHandler import LoginHandler
+# from logoutHandler import LogoutHandler
+# from signupHandler import SignupHandler
+# from newsHandler import NewsHandler
+# from error404Handler import Error404Handler
+# from tucaoIndexHandler import TucaoIndexHandler
+# from aboutHandler import AboutHandler
+# from projectHandler import ProjectHandler
+# from tucaoCommHandler import TucaoCommHandler
+# from homeHandler import HomeHandler
+# from profileHandler import ProfileHandler
+# from languagesActivitiesHandler import LanguagesActivitiesHandler
+BaseHandler = myTools.BaseHandler
+
+from controller.web import *
+from controller.indoor_map import *
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -59,7 +57,7 @@ class Application(tornado.web.Application):
         #self.max_comm = 5000
         handlers = [
             (r'/', MainHandler),
-            # API -----------------
+            # API 
             (r'/api', APIHandler),
             (r'/api/follow', FllwHandler),
             (r'/api/subscribed', SbscHandler),
@@ -68,10 +66,12 @@ class Application(tornado.web.Application):
             (r'/api/cgpasswd', ChangePasswdHandler),
             (r'/api/cgavatar', ChangeAvatarHandler),
             (r'/api/login', APILoginHandler),
+            # web 
             (r'/login', LoginHandler),
             (r'/logout', LogoutHandler),
             (r'/signup', SignupHandler),
             (r'/id/(\d+)$', NewsHandler),
+
             (r'/renrencallback', RenrenCallBackHandler),
             (r'/renrengettoken', RenrenGetTokenHandler),
             
@@ -79,16 +79,15 @@ class Application(tornado.web.Application):
             (r'/index', TucaoIndexHandler),
             (r'/about', AboutHandler),
             (r'/project', ProjectHandler),
-            #(r'/tucao', TucaoHandler),
-            #(r'/tucao/(\d+)$', TucaoHandler),
             (r'/news', TucaoCommHandler),
             (r'/news/(\d+)$', TucaoCommHandler),
             (r'/home/(\d+)$', HomeHandler),
             (r'/profile', ProfileHandler),
             (r'/languagesactivities', LanguagesActivitiesHandler),
+
+            # indoor_map
             (r'/app/indoor$', IndoorHandler),
             (r'/app/indoor/map$', IndoorMapHandler),
-            #(r'/blacklist', BlackListHandler),
         ]
         settings = { 
                 "template_path": os.path.join(os.path.dirname(__file__), "templates"),
@@ -323,10 +322,12 @@ def main():
 
 def init():
     ENV_DICT['latest'] = myTools.get_latest_news_id()
-    ENV_DICT['total'] = myTools.get_total_news_num()
+    # ENV_DICT['total'] = myTools.get_total_news_num()
+    ENV_DICT['total'] = 0
     print ENV_DICT['total']
 
-    BLACKLIST = NewsDatabase.query("""SELECT * FROM blackList""")
+    # BLACKLIST = NewsDatabase.query("""SELECT * FROM blackList""")
+    BLACKLIST = []
     ENV_DICT['blacklist'] = []
     ENV_DICT['restrict'] = {}
     for blackdict in BLACKLIST:

@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 #encoding=utf-8
-'''db'''
-import config
 # import tornado.database
 import torndb
 

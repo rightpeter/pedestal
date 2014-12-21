@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 import tornado
-from myTools import *
+from util.myTools import *
 
 class Pagination(tornado.web.UIModule):
     def render(self, total_pages, current_page, visible_pages):
@@ -12,34 +12,15 @@ class Pagination(tornado.web.UIModule):
     def javascript_files(self):
         return ["/static/script/jquery.twbsPagination.js",
                 "/static/script/pagination-init.js"]
-    #    return ["/static/script/jquery-2.0.3.min.js",
 
 class Banner(tornado.web.UIModule):
     def render(self, slides):
         return self.render_string("banner.html", slides=slides)
 
-    #def css_files(self):
-    #    return ["/static/flat-ui/bootstrap/css/bootstrap.css",
-    #            "/static/css/index/carousel.css",
-    #            "/static/css/index/style.css"]
-
-    #def javascript_files(self):
-    #    return ["/static/flat-ui/js/jquery-2.0.3.min.js",
-    #            "/static/script/unslider.min.js",
-    #            "/static/script/index/banner.js"]
-
 class Navbar(tornado.web.UIModule):
     def render(self, brand, navs, user, login_state):
         return self.render_string("navbar.html", brand=brand, navs=navs,
                 user=user, login_state=login_state)
-
-    #def css_files(self):
-    #    return ["/static/flat-ui/bootstrap/css/bootstrap.css",
-    #            "/static/flat-ui/css/flat-ui.css"]
-
-    #def javascript_files(self):
-    #    return ["/static/flat-ui/js/jquery-2.0.3.min.js",
-    #            "/static/flat-ui/js/bootstrap.min.js"]
 
 class NavbarPedestal(Navbar):
     def render(self, user, url, login_state):
