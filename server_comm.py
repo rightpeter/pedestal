@@ -18,18 +18,6 @@ from model import *
 import util.myTools as myTools
 import util.uimodules as ui_modules
 
-# from loginHandler import LoginHandler
-# from logoutHandler import LogoutHandler
-# from signupHandler import SignupHandler
-# from newsHandler import NewsHandler
-# from error404Handler import Error404Handler
-# from tucaoIndexHandler import TucaoIndexHandler
-# from aboutHandler import AboutHandler
-# from projectHandler import ProjectHandler
-# from tucaoCommHandler import TucaoCommHandler
-# from homeHandler import HomeHandler
-# from profileHandler import ProfileHandler
-# from languagesActivitiesHandler import LanguagesActivitiesHandler
 BaseHandler = myTools.BaseHandler
 
 from controller.web import *
@@ -40,8 +28,8 @@ sys.setdefaultencoding('utf-8')
 
 from tornado.options import define, options
 
-define("port", default=80, help="run on the given port", type=int)
-# define("port", default=2357, help="run on the given port", type=int)
+# define("port", default=80, help="run on the given port", type=int)
+define("port", default=2358, help="run on the given port", type=int)
 
 class CJsonEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -232,19 +220,6 @@ class ChangeNameHandler(BaseHandler):
             
     
 class ChangePasswdHandler(BaseHandler):
-    # @tornado.web.authenticated
-    # def get(self):
-    #     name = self.get_current_user()
-    #     email = myTools.get_email_by_name(name)
-    #     passwd = self.get_argument('passwd')
-    #     new_passwd = self.get_argument('new_passwd')
-    #     re_new_passwd = self.get_argument('re_new_passwd')
-    #     
-    #     if myTools.change_passwd(email, passwd, new_passwd, re_new_passwd):
-    #         self.write('Passwd Changed!')
-    #     else:
-    #         self.write('Changing Passwd Fail!')
-
     @tornado.web.authenticated
     def post(self):
         name = self.get_current_user()
@@ -338,5 +313,3 @@ def init():
 if __name__ == "__main__":
     init()
     main()
-
-

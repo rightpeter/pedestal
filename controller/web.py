@@ -10,7 +10,6 @@ import tornado
 import torndb
 import math
 import httplib
-import json
 from config import *
 from model import *
 import util.myTools as myTools

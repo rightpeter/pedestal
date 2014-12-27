@@ -28,4 +28,3 @@ class Error404Handler(BaseHandler):
         user = myTools.get_current_user(self)
         url = self.request.uri
         self.render('404.html', user=user, url=url, login_state='Not')
-
