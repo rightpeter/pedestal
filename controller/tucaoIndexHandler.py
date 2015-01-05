@@ -19,11 +19,10 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import util.myTools as myTools
 
-class TucaoIndexHandler(BaseHandler):
+class TucaoIndexHandler(myTools.BaseHandler):
     def get(self):
         try:
             page = int(self.get_argument('page'))

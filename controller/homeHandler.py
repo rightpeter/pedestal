@@ -19,11 +19,10 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import  util.myTools as myTools
 
-class HomeHandler(BaseHandler):
+class HomeHandler(myTools.BaseHandler):
     @tornado.web.authenticated
     def get(self, home_id):
         home_name = myTools.get_name_by_id(home_id)

@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 #encoding=utf-8
 
-import db
-from db import *
+import os, sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from model import *
 import torndb
-import sys
 
 
 def installCommentTable():
@@ -95,33 +95,35 @@ def installCheckTable():
 def installSaltingTable():
     NewsDatabase.reconnect()
     NewsDatabase.execute("""CREATE TABLE `saltTable`(
+            `id` INT NOT NULL AUTO_INCREMENT,
             `email` VARCHAR(64) NOT NULL,
             `name` VARCHAR(32) NOT NULL,
             `salt` VARCHAR(64) NOT NULL,
-            PRIMARY KEY(`name`))
+            PRIMARY KEY(id))
             DEFAULT CHARSET=utf8
     """)
 
 if __name__ == "__main__":
     # db.init_db()
     # models.kv.db_inited = ''
-    if '-C' or '-A' in sys.argv:
+    print sys.argv
+    if '-C' in sys.argv or '-A' in sys.argv:
         installCommentTable()
 
-    if '-E' or '-A' in sys.argv:
+    if '-E' in sys.argv or '-A' in sys.argv:
         installEmailTable()
 
-    if '-N' or '-A' in sys.argv:
+    if '-N' in sys.argv or '-A' in sys.argv:
         installNewsTable()
 
-    if '-U' or '-A' in sys.argv:
+    if '-U' in sys.argv or '-A' in sys.argv:
         installUsersTable()
 
-    if '-F' or '-A' in sys.argv:
+    if '-F' in sys.argv or '-A' in sys.argv:
         installFllwTable()
         
-    if '-CHECK' or '-A' in sys.argv:
+    if '-CHECK' in sys.argv or '-A' in sys.argv:
         installCheckTable()
 
-    if '-SALT' or '-A' in sys.argv:
+    if '-SALT'in sys.argv or '-A' in sys.argv:
         installSaltingTable()

@@ -16,12 +16,28 @@ import threading
 from config import *
 from model import *
 import util.myTools as myTools
-import util.uimodules as ui_modules
+# import util.uimodules as ui_modules
+import util.uimodules as uimodules
 
 BaseHandler = myTools.BaseHandler
 
-from controller.web import *
 from controller.indoor_map import *
+
+from controller.aboutHandler import AboutHandler
+from controller.error404Handler import Error404Handler
+from controller.homeHandler import HomeHandler
+# from controller.indoorMapHandler import IndoorMapHandler
+from controller.indoor_map import IndoorHandler,IndoorMapHandler
+from controller.languagesActivitiesHandler import LanguagesActivitiesHandler
+from controller.loginHandler import LoginHandler
+from controller.logoutHandler import LogoutHandler
+from controller.newsHandler import NewsHandler
+from controller.profileHandler import ProfileHandler
+from controller.projectHandler import ProjectHandler
+from controller.signupHandler import SignupHandler
+from controller.tucaoCommHandler import TucaoCommHandler
+from controller.tucaoHandler import TucaoHandler
+from controller.tucaoIndexHandler import TucaoIndexHandler
 
 reload(sys)
 sys.setdefaultencoding('utf-8')

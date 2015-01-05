@@ -19,11 +19,10 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import util.myTools as myTools
 
-class ProjectHandler(BaseHandler):
+class ProjectHandler(myTools.BaseHandler):
     def get(self):
         user = myTools.get_current_user(self)
         url = self.request.uri

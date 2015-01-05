@@ -19,11 +19,10 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import util.myTools as myTools
 
-class LogoutHandler(BaseHandler):
+class LogoutHandler(myTools.BaseHandler):
     def get(self):
         url = self.get_cookie('url')
         self.clear_cookie('name')

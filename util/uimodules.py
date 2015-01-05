@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 import tornado
-from util.myTools import *
+import util.myTools as myTools
 
 class Pagination(tornado.web.UIModule):
     def render(self, total_pages, current_page, visible_pages):
@@ -26,7 +26,7 @@ class NavbarPedestal(Navbar):
     def render(self, user, url, login_state):
         brand = {}
         brand['href'] = '/'
-        brand['name'] = 'Pedestal'
+        brand['nkame'] = 'Pedestal'
 
         navs = [{}, {}, {}]
         navs[0]['name'] = '项目实验室'

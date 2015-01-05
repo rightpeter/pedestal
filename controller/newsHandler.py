@@ -19,11 +19,10 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import util.myTools as myTools
 
-class NewsHandler(BaseHandler):
+class NewsHandler(myTools.BaseHandler):
     def get(self, nnid):
         nid = int(nnid)
         news = myTools.get_a_news(nid)

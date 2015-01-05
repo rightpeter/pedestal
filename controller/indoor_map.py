@@ -16,11 +16,10 @@ import datetime
 from config import *
 from model import *
 import util.myTools as myTools
-import util.uimodules as uimodules
 
 BaseHandler = myTools.BaseHandler
 
-class IndoorHandler(BaseHandler):
+class IndoorHandler(myTools.BaseHandler):
     @tornado.web.authenticated
     def get(self):
         user = myTools.get_current_user(self)

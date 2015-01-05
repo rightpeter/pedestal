@@ -25,6 +25,7 @@ from email.mime.text import MIMEText
 from email.header import Header
 from model import *
 from config import *
+import traceback
 
 class BaseHandler(tornado.web.RequestHandler):
     def get_current_user(self):
@@ -229,7 +230,7 @@ def update_check(email, code):
 def send_check_email(email):
     passwd_seed = string.digits + string.ascii_letters + string.punctuation
     code = generate_password(30, passwd_seed)
-    name = myTools.get_name_by_email(email)
+    name = get_name_by_email(email)
     update_check(email, code)
     subject = '%s您好' % name
     
@@ -239,7 +240,7 @@ def send_check_email(email):
     print context
 
     name = get_name_by_email(email)
-    if (True == myTools.send_mail(email, subject, context)):
+    if (True == send_mail(email, subject, context)):
         print 'success to ', name
         return True
     else:
@@ -292,6 +293,7 @@ def add_news(id):
 
 
 def is_a_attack(httprequest):
+    print 'is_a_attack'
     ip = httprequest.request.remote_ip
 
     if ( ip in ENV_DICT['blacklist'] ):
@@ -366,15 +368,24 @@ def insert_a_user(user):
     salt = uuid.uuid4().hex
     hashed_password = hashlib.sha512(passwd + salt).hexdigest()
 
+    print '''-
+    ----- user in insert -----
+    -'''
+    print user
+    print '''-
+    ----- user in insert -----
+    -'''
     try:
         user['subscribed'] = 1;
         NewsDatabase.execute("""INSERT usersTable(email, name, password,
             subscribed) VALUES(%s, %s, %s, %s)""", user['email'], user['name'],
             hashed_password, user['subscribed']) 
-        NewsDatabase.execute("""INSERT saltTable(email, salt) VALUES(%s, %s)""",
-            user['email'], salt)
+        NewsDatabase.execute("""INSERT saltTable(email, salt, name) VALUES(%s,
+                %s, %s)""",
+            user['email'], salt, user['name'])
         return True
-    except:
+    except Exception, e:
+        print traceback.print_exc()
         return False
 
 def get_current_user(request):
@@ -383,25 +394,25 @@ def get_current_user(request):
     if name:
         user['vip'] = {}
         user['vip']['name'] = name
-        user['vip']['id'] = myTools.get_id_by_name(name)
+        user['vip']['id'] = get_id_by_name(name)
     name = request.get_secure_cookie('guest')
     if name:
         user['guest'] = {}
         user['guest']['name'] = name
-        user['guest']['id']  = myTools.get_id_by_name(name)
+        user['guest']['id']  = get_id_by_name(name)
     return user
     
 def login(email, password):
     if not is_email_exist(email):
         check = get_password_by_email(email) 
-        salt = myTools.get_salt_by_email(email)
+        salt = get_salt_by_email(email)
         hashed_password = hashlib.sha512(password+salt).hexdigest()
         if hashed_password == check:
             NewsDatabase.execute("""UPDATE usersTable SET last_login=%s
                     WHERE email=%s""",
                     now()[0],
                     email)
-            name = myTools.get_name_by_email(email)
+            name = get_name_by_email(email)
             print "email: ", email
             print "name", name
             print "password: ", password
@@ -435,7 +446,7 @@ def subscribe(name, subscribed):
     return False
 
 def change_passwd(email, passwd, new_passwd, re_new_passwd):
-    if myTools.login(email, passwd) and new_passwd==re_new_passwd:
+    if login(email, passwd) and new_passwd==re_new_passwd:
         name = get_name_by_email(email)
         passwd = new_passwd
         salt = uuid.uuid4().hex
@@ -452,7 +463,7 @@ def change_passwd(email, passwd, new_passwd, re_new_passwd):
 def change_name(name, new_name):
     print 'name: ', name
     print 'new_name: ', new_name
-    if new_name and not myTools.is_name_exist(new_name):
+    if new_name and not is_name_exist(new_name):
         print 'hehe'
         NewsDatabase.execute("""UPDATE usersTable SET name=%s WHERE
             name=%s""", new_name, name)

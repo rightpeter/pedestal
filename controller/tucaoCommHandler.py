@@ -19,11 +19,10 @@ import pickle
 import datetime
 import threading
 from config import *
-from db import *
-from myTools import *
-import uimodules
+from model import *
+import util.myTools as myTools
 
-class TucaoCommHandler(BaseHandler):
+class TucaoCommHandler(myTools.BaseHandler):
     def get(self, nnid):
         NewsDatabase.reconnect()
         nid = int(nnid)
