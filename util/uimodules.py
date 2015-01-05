@@ -26,7 +26,7 @@ class NavbarPedestal(Navbar):
     def render(self, user, url, login_state):
         brand = {}
         brand['href'] = '/'
-        brand['nkame'] = 'Pedestal'
+        brand['name'] = 'Pedestal'
 
         navs = [{}, {}, {}]
         navs[0]['name'] = '项目实验室'

@@ -2,3 +2,4 @@
 *.back
 tags
 *.pickle
+*.swp
