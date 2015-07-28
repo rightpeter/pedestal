@@ -20,7 +20,7 @@ def installCommentTable():
             DEFAULT CHARSET=utf8
     """)
 
-    
+
 def installEmailTable():
     NewsDatabase.reconnect()
     NewsDatabase.execute("""CREATE TABLE `emailTable`(

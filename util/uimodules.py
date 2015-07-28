@@ -41,7 +41,7 @@ class NavbarPedestal(Navbar):
             navs[1]['active'] = True
         elif url == '/about':
             navs[2]['active'] = True
-    
+
         name = {}
         if user.has_key('vip'):
             name['name'] = user['vip']['name']

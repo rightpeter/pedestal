@@ -36,8 +36,8 @@ class LoginHandler(myTools.BaseHandler):
 
     def post(self):
         if ( myTools.is_a_attack(self) ):
-            return 
-       
+            return
+
         self.set_header("Content-Type", "text/plain")
 
         email = self.get_argument('email')

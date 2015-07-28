@@ -61,7 +61,7 @@ class Application(tornado.web.Application):
         #self.max_comm = 5000
         handlers = [
             (r'/', MainHandler),
-            # API 
+            # API
             (r'/api', APIHandler),
             (r'/api/follow', FllwHandler),
             (r'/api/subscribed', SbscHandler),
@@ -70,7 +70,7 @@ class Application(tornado.web.Application):
             (r'/api/cgpasswd', ChangePasswdHandler),
             (r'/api/cgavatar', ChangeAvatarHandler),
             (r'/api/login', APILoginHandler),
-            # web 
+            # web
             (r'/login', LoginHandler),
             (r'/logout', LogoutHandler),
             (r'/signup', SignupHandler),
@@ -78,7 +78,7 @@ class Application(tornado.web.Application):
 
             (r'/renrencallback', RenrenCallBackHandler),
             (r'/renrengettoken', RenrenGetTokenHandler),
-            
+
             (r'/404', Error404Handler),
             (r'/index', TucaoIndexHandler),
             (r'/about', AboutHandler),
@@ -133,14 +133,13 @@ class MainHandler(BaseHandler):
         slides[2]['descript'] = "尽情地为自己呐喊"
         slides[2]['href'] = "/about"
         slides[2]['button'] = "关于我们"
-       
+
         slides[3]['image'] = "pedestal_welcome.jpg"
         slides[3]['name'] = "这只是一个大标题"
         slides[3]['descript'] = "用来测试轮播插件这个复杂的东西"
         slides[3]['href'] = "/signup"
         slides[3]['button'] = "加入我们"
 
-        
         user = myTools.get_current_user(self)
         self.set_cookie("url", self.request.uri)
         url = self.request.uri
@@ -148,7 +147,8 @@ class MainHandler(BaseHandler):
         login_state = self.get_cookie('login')
         self.render("index.html", slides=slides, user=user, url=url,
                 login_state=login_state)
-        
+
+
 class APIHandler(BaseHandler):
     def get(self):
         jsonDict = {}
@@ -187,7 +187,7 @@ class FllwHandler(BaseHandler):
             self.write("Succeed Following!")
         else:
             self.write("Followed Error!")
-        
+
 class SbscHandler(BaseHandler):
     @tornado.web.authenticated
     def post(self):

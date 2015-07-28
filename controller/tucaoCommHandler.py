@@ -32,12 +32,12 @@ class TucaoCommHandler(myTools.BaseHandler):
         newsList = myTools.get_news_list(min_id, max_id)
         for news in newsList:
             news['title'] = news['title'][:15] + '...'
-       
+
         news = myTools.get_a_news(nid)
-        
+
         news['body'] = news['body'].replace('href="/Attachments/file', 'href="http://ssdut.dlut.edu.cn/Attachments/file')
         news['body'] = news['body'].replace('src="/Attachments/image', 'src="http://ssdut.dlut.edu.cn/Attachments/image')
-        
+
         comm = NewsDatabase.query("""SELECT * FROM commTable WHERE id=%r ORDER
                 BY level DESC, tolevel""", nid)
         latest = myTools.get_latest_news_id()
