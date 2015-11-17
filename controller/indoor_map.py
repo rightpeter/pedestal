@@ -5,12 +5,10 @@ import sys
 import os
 import re
 import time
-import json
 import tornado
 import torndb
 import math
 import httplib
-import json
 import pickle
 import datetime
 from config import *

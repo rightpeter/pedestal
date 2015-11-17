@@ -5,7 +5,6 @@ import sys
 import os
 import re
 import time
-import json
 import tornado.web
 import tornado.ioloop
 import tornado.httpclient
@@ -14,7 +13,6 @@ import tornado.httpclient
 import torndb
 import math
 import httplib
-import json
 import pickle
 import datetime
 import threading

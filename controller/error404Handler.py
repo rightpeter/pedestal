@@ -14,7 +14,6 @@ import tornado.httpclient
 import torndb
 import math
 import httplib
-import json
 import pickle
 import datetime
 import threading
